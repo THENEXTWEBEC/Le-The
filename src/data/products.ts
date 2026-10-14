@@ -1,0 +1,74 @@
+export type Product = {
+  slug: string;
+  name: string;
+  kind: string;
+  flavor: string;
+  serving: string[];
+  image: string;
+  imageAlt: string;
+  description: string;
+  notes: string;
+  ingredients: string | null;
+  quantity: string | null;
+  steepTime: string | null;
+  waterTemperature: string | null;
+  suggestedServing: string;
+  relatedRecipes: string[];
+};
+
+// Contenido editorial inicial. Confirmar nombres y fichas antes de publicar el catálogo comercial.
+export const products: Product[] = [
+  {
+    slug: "matcha",
+    name: "Matcha",
+    kind: "Matcha",
+    flavor: "Vegetal",
+    serving: ["Caliente", "Frío"],
+    image: "/images/matcha-latte.jpg",
+    imageAlt: "Matcha verde vertiéndose sobre leche en un vaso",
+    description: "Un punto de partida para explorar el ritual del matcha, solo o en latte.",
+    notes: "Perfil de sabor por confirmar para el producto comercial.",
+    ingredients: null,
+    quantity: null,
+    steepTime: null,
+    waterTemperature: null,
+    suggestedServing: "Batido con agua o preparado como latte frío o caliente.",
+    relatedRecipes: ["matcha-latte-frio", "matcha-latte-caliente"],
+  },
+  {
+    slug: "te-naranja",
+    name: "Té con naranja",
+    kind: "Té de hoja suelta",
+    flavor: "Cítrico",
+    serving: ["Caliente", "Frío"],
+    image: "/images/te-naranja.jpg",
+    imageAlt: "Empaque rojo de Le Thé sobre una composición de naranjas frescas",
+    description: "Una invitación a descubrir un té de inspiración cítrica.",
+    notes: "Notas exactas de cata por confirmar.",
+    ingredients: null,
+    quantity: null,
+    steepTime: null,
+    waterTemperature: null,
+    suggestedServing: "Pruébalo en una preparación fría con rodajas de naranja.",
+    relatedRecipes: ["te-frio-naranja", "guia-preparar-te"],
+  },
+  {
+    slug: "te-arandanos",
+    name: "Té con arándanos",
+    kind: "Té de hoja suelta",
+    flavor: "Frutal",
+    serving: ["Caliente", "Frío"],
+    image: "/images/te-arandanos.jpg",
+    imageAlt: "Empaque rojo de Le Thé rodeado de arándanos",
+    description: "Una opción frutal para imaginar un pequeño momento de pausa.",
+    notes: "Notas exactas de cata por confirmar.",
+    ingredients: null,
+    quantity: null,
+    steepTime: null,
+    waterTemperature: null,
+    suggestedServing: "Sírvelo frío con arándanos frescos, si te apetece.",
+    relatedRecipes: ["te-frio-arandanos", "guia-preparar-te"],
+  },
+];
+
+export const getProduct = (slug: string) => products.find((item) => item.slug === slug);

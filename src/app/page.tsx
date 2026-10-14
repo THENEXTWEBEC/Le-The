@@ -1,0 +1,43 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ProductCard } from "@/components/product-card";
+import { RecipeCard } from "@/components/recipe-card";
+import { products } from "@/data/products";
+import { recipes } from "@/data/recipes";
+import { instagramUrl, whatsappHref } from "@/lib/contact";
+
+export default function HomePage() {
+  const whatsapp = whatsappHref("Hola, quiero conocer los tés de Le Thé. ¿Me ayudan a elegir uno?");
+  return <>
+    <section className="hero container">
+      <div className="hero-copy">
+        <p className="eyebrow">Le Thé Ecuador</p>
+        <h1>Haz del té <em>tu momento.</em></h1>
+        <p className="hero-lede">Tés para descubrir con calma, preparar a tu manera y disfrutar todos los días.</p>
+        <div className="actions"><Link className="button button-primary" href="/catalogo">Explorar tés <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href="/recetas">Ver recetas</Link></div>
+      </div>
+      <div className="hero-image"><Image src="/images/matcha-latte.jpg" alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
+    </section>
+
+    <section className="intro-section section-space">
+      <div className="container intro-grid">
+        <div className="intro-image"><Image src="/images/ritual-del-te.jpg" alt="Composición de infusiones y la frase «Si un té no te hace feliz, tómate dos»" fill sizes="(max-width: 800px) 100vw, 44vw" /></div>
+        <div className="intro-copy"><p className="eyebrow">El ritual</p><h2>Una pausa que se siente tuya.</h2><p>Hay muchas formas de disfrutar una taza. En Le Thé queremos que encuentres la que acompaña mejor tu día: caliente, fría, sola o compartida.</p><Link className="text-link" href="/nosotros">Conoce Le Thé <span aria-hidden="true">↗</span></Link></div>
+      </div>
+    </section>
+
+    <section className="section-space container">
+      <div className="section-heading"><p className="eyebrow">Para empezar</p><h2>Elige el tuyo.</h2><p>Naranja, arándanos o matcha. Tres caminos para explorar, con más tés por venir.</p></div>
+      <div className="featured-products">{products.map((item) => <ProductCard key={item.slug} product={item} />)}</div>
+      <div className="section-end"><Link href="/catalogo" className="button button-outline">Ver todo el catálogo <span aria-hidden="true">↗</span></Link></div>
+    </section>
+
+    <section className="how-section section-space"><div className="container how-grid"><div><p className="eyebrow">Cómo disfrutar tu té</p><h2>Tu forma de prepararlo también cuenta.</h2><p>Una buena taza empieza con curiosidad. Descubre ideas para ajustar agua, tiempo, leche, hielo y frutas a tu gusto.</p><Link className="button button-light" href="/recetas/guia-preparar-te">Aprender a prepararlo <span aria-hidden="true">↗</span></Link></div><div className="how-lines" aria-hidden="true"><span>01 <b>Elige</b></span><span>02 <b>Prepara</b></span><span>03 <b>Disfruta</b></span></div></div></section>
+
+    <section className="section-space container"><div className="section-heading"><p className="eyebrow">Ideas para tu taza</p><h2>Recetas para volver a preparar.</h2><p>Pasos claros, cantidades útiles y espacio para encontrar tu versión favorita.</p></div><div className="recipe-preview">{recipes.slice(0, 3).map((item) => <RecipeCard key={item.slug} recipe={item} />)}</div><div className="section-end"><Link href="/recetas" className="button button-outline">Todas las recetas <span aria-hidden="true">↗</span></Link></div></section>
+
+    <section className="idea-section section-space container"><div className="idea-image"><Image src="/images/idea-bebida-citrica.jpg" alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
+
+    <section className="contact-band"><div className="container contact-band-inner"><div><p className="eyebrow">¿Cuál te llevas primero?</p><h2>Elige el tuyo y conviértelo en tu momento del día.</h2><p>Naranja, manzana, arándano, menta y rosas. Tés de hoja suelta, seleccionados con cariño y empacados para conservar todo su aroma. Cuéntanos cuál te gustaría probar primero.</p></div><div className="contact-band-actions">{whatsapp ? <a className="button button-primary" href={whatsapp} target="_blank" rel="noopener noreferrer">Pedir por WhatsApp <span aria-hidden="true">↗</span></a> : <Link className="button button-primary" href="/contacto">Conversemos <span aria-hidden="true">↗</span></Link>}{instagramUrl && <a className="text-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Cuéntanos por DM <span aria-hidden="true">↗</span></a>}</div></div></section>
+  </>;
+}
