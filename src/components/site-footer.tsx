@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { contactEmail, instagramUrl, whatsappHref } from "@/lib/contact";
+import { BrandLogo } from "@/components/brand-logo";
 
 export function SiteFooter() {
   const whatsapp = whatsappHref("Hola, me gustaría conocer los tés de Le Thé.");
@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <Link href="/" aria-label="Le Thé Ecuador, inicio" className="footer-logo">
-            <Image src="/images/logo-provisional.jpg" alt="Le Thé Ecuador" width={112} height={99} />
+            <BrandLogo />
           </Link>
           <p>Un momento de té para hacer una pausa en tu día.</p>
         </div>

@@ -62,11 +62,10 @@ El enlace de Instagram `@lethe_ec` procede de la imagen de marca proporcionada y
 
 ## Imágenes y marca
 
-Las cinco fotografías recibidas están guardadas como JPEG optimizados con nombres descriptivos. El archivo `logo-provisional.jpg` es un recorte del logotipo que aparece en la fotografía de matcha, usado de forma temporal. Sustitúyelo por el archivo oficial cuando esté disponible, conservando las proporciones y actualizando las referencias en `site-header.tsx` y `site-footer.tsx`. La composición de bebida cítrica se presenta únicamente como inspiración de preparación, con un encuadre que evita usar la marca ajena de la imagen como identidad de Le Thé.
+Las cinco fotografías recibidas están guardadas como JPEG optimizados con nombres descriptivos. El sexto archivo, `logo-le-the-ecuador.png`, es el logotipo oficial proporcionado para el encabezado y el pie de página. Se muestra desde el mismo PNG, sin reconstruirlo. La composición de bebida cítrica se presenta únicamente como inspiración de preparación, con un encuadre que evita usar la marca ajena de la imagen como identidad de Le Thé.
 
 ## Pendiente de confirmación
 
-- Archivo independiente del logotipo oficial.
 - Nombres comerciales, composición, notas de cata y parámetros de infusión de cada té.
 - Precios, disponibilidad, correo y ubicación, si se publicarán más adelante.
 

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 
 const links = [
   { href: "/catalogo", label: "Catálogo" },
@@ -13,7 +13,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-inner container">
         <Link className="brand" href="/" aria-label="Le Thé Ecuador, inicio">
-          <Image src="/images/logo-provisional.jpg" alt="Le Thé Ecuador" width={112} height={99} priority />
+          <BrandLogo priority />
         </Link>
         <nav className="main-nav" aria-label="Navegación principal">
           {links.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
