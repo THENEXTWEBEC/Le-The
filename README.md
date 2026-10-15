@@ -2,6 +2,8 @@
 
 Sitio inicial de Le Thé Ecuador, creado con Next.js, TypeScript y Tailwind CSS. Incluye una portada editorial, catálogo exploratorio, fichas de té, recetas, presentación de marca y contacto.
 
+**Web pública:** https://le-the-ecuador.robustlyric4.chatgpt.site/
+
 ## Requisitos
 
 - Node.js 20.9 o superior
@@ -25,6 +27,7 @@ npm run build
 ```
 
 La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. Esa carpeta se publica en Sites.
+El código de `main` y la web publicada se actualizan por separado; un cambio en GitHub no se despliega automáticamente.
 
 ## Configuración de contacto
 
