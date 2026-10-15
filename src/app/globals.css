@@ -16,7 +16,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
 img { display: block; }
 a { color: inherit; text-decoration: none; }
-button, input, select { font: inherit; }
+button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 ::selection { background: #d9bcb6; color: var(--red-dark); }
 :focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
@@ -102,6 +102,46 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .contact-band-inner { display: flex; align-items: end; justify-content: space-between; gap: 54px; }
 .contact-band h2 { max-width: 660px; }
 .contact-band-actions { display: flex; flex-direction: column; align-items: start; gap: 25px; flex: 0 0 auto; padding-bottom: 12px; }
+.business-band { background: var(--olive); color: white; padding: clamp(64px, 7vw, 105px) 0; }
+.business-band-inner { display: flex; align-items: end; justify-content: space-between; gap: 52px; }
+.business-band .eyebrow { color: #eadfbd; }
+.business-band h2 { font-size: clamp(2.8rem, 4.5vw, 5rem); line-height: 1.04; letter-spacing: -.045em; margin: 18px 0 22px; }
+.business-band p:not(.eyebrow) { max-width: 57ch; color: #f0f2e9; line-height: 1.8; margin-bottom: 0; }
+.business-band .button { flex: 0 0 auto; margin-bottom: 4px; }
+
+.business-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; }
+.business-hero-copy { align-self: center; padding: 70px clamp(35px, 6vw, 100px) 70px 0; }
+.business-hero h1 { max-width: 620px; font-size: clamp(3.7rem, 6vw, 6.5rem); line-height: 1; letter-spacing: -.055em; margin: 22px 0 28px; }
+.business-hero h1 em { color: var(--red); font-weight: 400; }
+.business-hero-copy > p:not(.eyebrow) { max-width: 48ch; color: var(--muted); font-size: 1.06rem; line-height: 1.75; margin-bottom: 34px; }
+.business-hero-image { position: relative; overflow: hidden; min-height: 620px; }
+.business-hero-image img { object-fit: cover; object-position: center; }
+.business-occasions .section-heading { max-width: 760px; }
+.business-occasion-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.business-occasion-list > div { padding: 30px 32px 20px 0; }
+.business-occasion-list > div:not(:first-child) { padding-left: 32px; border-left: 1px solid var(--line); }
+.business-occasion-list span { color: var(--red); font-size: .74rem; font-weight: 700; letter-spacing: .1em; }
+.business-occasion-list h3 { font-size: clamp(1.8rem, 2.5vw, 2.7rem); letter-spacing: -.035em; margin: 25px 0 14px; }
+.business-occasion-list p { color: var(--muted); line-height: 1.7; max-width: 30ch; }
+.business-inquiry-section { background: var(--cream); padding: clamp(72px, 8vw, 120px) 0; scroll-margin-top: 30px; }
+.business-inquiry-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 8vw, 120px); align-items: start; }
+.business-inquiry-intro { position: sticky; top: 36px; }
+.business-inquiry-intro h2 { font-size: clamp(3rem, 4.5vw, 5.1rem); line-height: 1.04; letter-spacing: -.05em; margin: 17px 0 25px; }
+.business-inquiry-intro p:not(.eyebrow) { color: var(--muted); line-height: 1.8; max-width: 43ch; }
+.business-form { background: #fffdfa; border: 1px solid var(--line); padding: clamp(26px, 3.5vw, 50px); }
+.business-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+.business-form-grid label { display: block; color: #47473e; font-size: .82rem; font-weight: 700; }
+.business-form-grid label span { color: var(--red); }
+.business-form-grid input, .business-form-grid select, .business-form-grid textarea { display: block; width: 100%; min-width: 0; margin-top: 10px; border: 1px solid #c3bbaa; border-radius: 0; background: white; color: var(--ink); font-size: .9rem; font-weight: 400; padding: 12px 13px; }
+.business-form-grid input, .business-form-grid select { min-height: 48px; }
+.business-form-grid textarea { line-height: 1.5; resize: vertical; }
+.business-form-grid input::placeholder, .business-form-grid textarea::placeholder { color: #77766e; }
+.business-form-wide { grid-column: 1 / -1; }
+.business-consent { display: flex; align-items: flex-start; gap: 11px; margin: 28px 0 13px; color: #45453e; font-size: .88rem; line-height: 1.5; }
+.business-consent input { flex: 0 0 auto; width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--red); }
+.business-form-note { color: var(--muted); font-size: .78rem; line-height: 1.65; margin-bottom: 26px; }
+.business-handoff { color: var(--muted); font-size: .83rem; line-height: 1.6; margin: 18px 0 0; }
+.business-handoff a { color: var(--red); border-bottom: 1px solid currentColor; }
 
 .site-footer { background: #e9e2d6; border-top: 1px solid var(--line); padding-top: 64px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding-bottom: 70px; }
@@ -198,6 +238,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .hero-image { min-height: 590px; }
   .filters, .filters.recipe-filters { grid-template-columns: repeat(3, 1fr); }
   .filters label:first-child { grid-column: span 3; }
+  .business-inquiry-layout { grid-template-columns: .75fr 1.25fr; gap: 40px; }
 }
 
 @media (max-width: 700px) {
@@ -240,6 +281,19 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .contact-options { grid-template-columns: 1fr; }
   .contact-options > div, .contact-options > div:not(:first-child) { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .contact-options p { min-height: 0; }
+  .business-band-inner { display: block; }
+  .business-band .button { margin-top: 30px; }
+  .business-hero { display: flex; flex-direction: column; min-height: 0; }
+  .business-hero-copy { padding: 52px 0 42px; }
+  .business-hero h1 { font-size: clamp(3.5rem, 12vw, 5.5rem); }
+  .business-hero-image { min-height: 0; height: 450px; margin: 0 -16px; }
+  .business-occasion-list { grid-template-columns: 1fr; }
+  .business-occasion-list > div, .business-occasion-list > div:not(:first-child) { padding: 25px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .business-occasion-list h3 { margin: 14px 0 10px; }
+  .business-inquiry-layout { grid-template-columns: 1fr; gap: 32px; }
+  .business-inquiry-intro { position: static; }
+  .business-form-grid { grid-template-columns: 1fr; }
+  .business-form-wide { grid-column: auto; }
 }
 
 @media (max-width: 400px) {

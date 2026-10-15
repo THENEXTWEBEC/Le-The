@@ -1,6 +1,6 @@
 # Le Thé Ecuador
 
-Sitio inicial de Le Thé Ecuador, creado con Next.js, TypeScript y Tailwind CSS. Incluye una portada editorial, catálogo exploratorio, fichas de té, recetas, presentación de marca y contacto.
+Sitio inicial de Le Thé Ecuador, creado con Next.js, TypeScript y Tailwind CSS. Incluye una portada editorial, catálogo exploratorio, fichas de té, recetas, presentación de marca, consultas para empresas y contacto.
 
 **Web pública:** https://le-the-ecuador.robustlyric4.chatgpt.site/
 
@@ -35,6 +35,8 @@ El WhatsApp comercial confirmado es `+593 99 100 1033` y está configurado por d
 
 El enlace de Instagram `@lethe_ec` procede de la imagen de marca proporcionada y puede cambiarse con `NEXT_PUBLIC_INSTAGRAM_URL`. El correo y la URL pública del sitio se configuran con `NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_SITE_URL`. No se publica una dirección física sin confirmación.
 
+El formulario de Empresas prepara un mensaje para el WhatsApp confirmado. La persona debe pulsar «Enviar» en WhatsApp para completar su consulta; el sitio no guarda ni transmite el formulario por sí mismo.
+
 ## Contenido y estructura
 
 | Ruta o carpeta | Contenido |
@@ -45,6 +47,7 @@ El enlace de Instagram `@lethe_ec` procede de la imagen de marca proporcionada y
 | `/recetas` | Búsqueda y filtros de recetas |
 | `/recetas/[slug]` | Preparación detallada |
 | `/nosotros` | Presentación breve de la marca |
+| `/empresas` | Consultas de equipos, eventos y regalos mediante WhatsApp |
 | `/contacto` | Canales confirmados |
 | `src/data/products.ts` | Datos editables de tés |
 | `src/data/recipes.ts` | Datos editables de recetas |

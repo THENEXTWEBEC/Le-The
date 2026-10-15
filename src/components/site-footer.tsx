@@ -18,6 +18,7 @@ export function SiteFooter() {
           <Link href="/catalogo">Catálogo</Link>
           <Link href="/recetas">Recetas</Link>
           <Link href="/nosotros">Nosotros</Link>
+          <Link href="/empresas">Empresas</Link>
           <Link href="/contacto">Contacto</Link>
         </div>
         <div>
