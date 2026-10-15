@@ -213,7 +213,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 
 .blog-home-section { background: #eee7db; }
 .blog-index { padding-top: clamp(54px, 7vw, 100px); padding-bottom: 120px; }
-.blog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 48px); }
 .blog-card { min-width: 0; }
 .blog-card-image { position: relative; display: block; aspect-ratio: 1.12; overflow: hidden; background: #e7e0d3; }
 .blog-card-image img { object-fit: cover; transition: transform .5s ease; }
@@ -221,7 +221,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .blog-card-image-portrait img { object-fit: contain; }
 .blog-card-image:hover img { transform: scale(1.025); }
 .blog-card-copy { padding: 25px 3px 0; }
-.blog-card-copy h3 { font-size: clamp(2rem, 3vw, 3.15rem); line-height: 1.08; letter-spacing: -.04em; margin: 15px 0 17px; }
+.blog-card-copy h3 { font-size: clamp(1.9rem, 2.5vw, 2.8rem); line-height: 1.08; letter-spacing: -.04em; margin: 15px 0 17px; }
 .blog-card-copy > p:not(.eyebrow) { color: var(--muted); line-height: 1.7; max-width: 54ch; }
 .blog-card-copy .text-link { margin-top: 9px; }
 .blog-article { padding-bottom: clamp(90px, 10vw, 150px); }
@@ -269,6 +269,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .filters, .filters.recipe-filters { grid-template-columns: repeat(3, 1fr); }
   .filters label:first-child { grid-column: span 3; }
   .business-inquiry-layout { grid-template-columns: .75fr 1.25fr; gap: 40px; }
+  .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 700px) {

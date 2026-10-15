@@ -74,6 +74,55 @@ export const blogPosts: BlogPost[] = [
     ],
     nextStep: { label: "Explorar más ideas para tu taza", href: "/recetas" },
   },
+  {
+    slug: "descubre-el-te-negro",
+    title: "Descubre la magia del té negro",
+    category: "Conoce tu té",
+    excerpt: "Tres razones para hacerle espacio al té negro: sus compuestos vegetales, su carácter estimulante y una historia que la ciencia sigue explorando.",
+    image: assetPath("/images/blog-te-negro.png"),
+    imageAlt: "Té negro servido en una taza, con el texto «Beneficios del té negro» y el logotipo de Le Thé Ecuador",
+    imageWidth: 1484,
+    imageHeight: 1486,
+    sections: [
+      {
+        heading: "Una taza rica en matices",
+        paragraphs: [
+          "Amantes del té, este es el momento de descubrir el té negro. Su sabor profundo y sus aromas hacen que cada preparación tenga algo propio. Aquí van tres razones para acercarse a él con curiosidad.",
+        ],
+      },
+      {
+        heading: "1. Polifenoles en cada sorbo",
+        paragraphs: [
+          "El té negro contiene polifenoles, incluidos compuestos conocidos como teaflavinas. En estudios de laboratorio muestran actividad antioxidante. Eso describe una propiedad de sus compuestos; no significa que una taza detenga el envejecimiento.",
+        ],
+      },
+      {
+        heading: "2. Una pausa con cafeína y L-teanina",
+        paragraphs: [
+          "El té negro aporta cafeína y L-teanina. Algunas investigaciones han estudiado su relación con la atención, aunque la respuesta depende de la dosis y de cada persona. Una taza puede acompañar tu momento de concentración sin prometer un efecto igual para todos.",
+        ],
+      },
+      {
+        heading: "3. Una pregunta para la salud del corazón",
+        paragraphs: [
+          "También se investiga el té negro por su posible relación con la presión arterial y la función de los vasos sanguíneos. Algunos ensayos observaron cambios modestos, mientras otros no hallaron efectos claros. Por ahora, disfrutarlo no sustituye los hábitos ni la atención médica que cuidan el corazón.",
+        ],
+      },
+      {
+        heading: "¿Cómo disfrutas el tuyo?",
+        paragraphs: [
+          "Solo, con un toque de leche o servido frío: cuéntanos cómo disfrutas tu té negro y comparte tu pausa con Le Thé Ecuador usando #MomentoTeNegro. ☕",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Estudio de los compuestos fenólicos del té negro", url: "https://pubmed.ncbi.nlm.nih.gov/12516885/" },
+      { label: "Ensayo sobre té negro, cafeína, L-teanina y atención", url: "https://pubmed.ncbi.nlm.nih.gov/26869148/" },
+      { label: "Ensayo sobre té negro y presión arterial", url: "https://pubmed.ncbi.nlm.nih.gov/25658240/" },
+      { label: "Ensayo sobre té negro y función vascular", url: "https://pubmed.ncbi.nlm.nih.gov/29460812/" },
+    ],
+    nextStep: { label: "Explorar nuestros tés", href: "/catalogo" },
+  },
 ];
 
 export const getBlogPost = (slug: string) => blogPosts.find((post) => post.slug === slug);
