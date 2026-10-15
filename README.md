@@ -4,6 +4,8 @@ Sitio inicial de Le Thé Ecuador, creado con Next.js, TypeScript y Tailwind CSS.
 
 **Web pública:** https://le-the-ecuador.robustlyric4.chatgpt.site/
 
+**GitHub Pages:** https://thenextwebec.github.io/Le-The/
+
 ## Requisitos
 
 - Node.js 20.9 o superior
@@ -26,8 +28,7 @@ npm run typecheck
 npm run build
 ```
 
-La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. Esa carpeta se publica en Sites.
-El código de `main` y la web publicada se actualizan por separado; un cambio en GitHub no se despliega automáticamente.
+La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. GitHub Actions publica automáticamente cada cambio en `main` en GitHub Pages, bajo `/Le-The/`. La web de Sites se actualiza por separado.
 
 ## Configuración de contacto
 

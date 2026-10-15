@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/paths";
+
 export type Product = {
   slug: string;
   name: string;
@@ -24,7 +26,7 @@ export const products: Product[] = [
     kind: "Matcha",
     flavor: "Vegetal",
     serving: ["Caliente", "Frío"],
-    image: "/images/matcha-latte.jpg",
+    image: assetPath("/images/matcha-latte.jpg"),
     imageAlt: "Matcha verde vertiéndose sobre leche en un vaso",
     description: "Un punto de partida para explorar el ritual del matcha, solo o en latte.",
     notes: "Perfil de sabor por confirmar para el producto comercial.",
@@ -41,7 +43,7 @@ export const products: Product[] = [
     kind: "Té de hoja suelta",
     flavor: "Cítrico",
     serving: ["Caliente", "Frío"],
-    image: "/images/te-naranja.jpg",
+    image: assetPath("/images/te-naranja.jpg"),
     imageAlt: "Empaque rojo de Le Thé sobre una composición de naranjas frescas",
     description: "Una invitación a descubrir un té de inspiración cítrica.",
     notes: "Notas exactas de cata por confirmar.",
@@ -58,7 +60,7 @@ export const products: Product[] = [
     kind: "Té de hoja suelta",
     flavor: "Frutal",
     serving: ["Caliente", "Frío"],
-    image: "/images/te-arandanos.jpg",
+    image: assetPath("/images/te-arandanos.jpg"),
     imageAlt: "Empaque rojo de Le Thé rodeado de arándanos",
     description: "Una opción frutal para imaginar un pequeño momento de pausa.",
     notes: "Notas exactas de cata por confirmar.",

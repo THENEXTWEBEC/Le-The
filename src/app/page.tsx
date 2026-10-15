@@ -5,6 +5,7 @@ import { RecipeCard } from "@/components/recipe-card";
 import { products } from "@/data/products";
 import { recipes } from "@/data/recipes";
 import { instagramUrl, whatsappHref } from "@/lib/contact";
+import { assetPath } from "@/lib/paths";
 
 export default function HomePage() {
   const whatsapp = whatsappHref("Hola, quiero conocer los tés de Le Thé. ¿Me ayudan a elegir uno?");
@@ -16,12 +17,12 @@ export default function HomePage() {
         <p className="hero-lede">Tés para descubrir con calma, preparar a tu manera y disfrutar todos los días.</p>
         <div className="actions"><Link className="button button-primary" href="/catalogo">Explorar tés <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href="/recetas">Ver recetas</Link></div>
       </div>
-      <div className="hero-image"><Image src="/images/matcha-latte.jpg" alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
+      <div className="hero-image"><Image src={assetPath("/images/matcha-latte.jpg")} alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
     </section>
 
     <section className="intro-section section-space">
       <div className="container intro-grid">
-        <div className="intro-image"><Image src="/images/ritual-del-te.jpg" alt="Composición de infusiones y la frase «Si un té no te hace feliz, tómate dos»" fill sizes="(max-width: 800px) 100vw, 44vw" /></div>
+        <div className="intro-image"><Image src={assetPath("/images/ritual-del-te.jpg")} alt="Composición de infusiones y la frase «Si un té no te hace feliz, tómate dos»" fill sizes="(max-width: 800px) 100vw, 44vw" /></div>
         <div className="intro-copy"><p className="eyebrow">El ritual</p><h2>Una pausa que se siente tuya.</h2><p>Hay muchas formas de disfrutar una taza. En Le Thé queremos que encuentres la que acompaña mejor tu día: caliente, fría, sola o compartida.</p><Link className="text-link" href="/nosotros">Conoce Le Thé <span aria-hidden="true">↗</span></Link></div>
       </div>
     </section>
@@ -36,7 +37,7 @@ export default function HomePage() {
 
     <section className="section-space container"><div className="section-heading"><p className="eyebrow">Ideas para tu taza</p><h2>Recetas para volver a preparar.</h2><p>Pasos claros, cantidades útiles y espacio para encontrar tu versión favorita.</p></div><div className="recipe-preview">{recipes.slice(0, 3).map((item) => <RecipeCard key={item.slug} recipe={item} />)}</div><div className="section-end"><Link href="/recetas" className="button button-outline">Todas las recetas <span aria-hidden="true">↗</span></Link></div></section>
 
-    <section className="idea-section section-space container"><div className="idea-image"><Image src="/images/idea-bebida-citrica.jpg" alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
+    <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/idea-bebida-citrica.jpg")} alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
 
     <section className="business-band"><div className="container business-band-inner"><div><p className="eyebrow">Le Thé para empresas</p><h2>Un momento para compartir.</h2><p>¿Tienes una idea para tu equipo, un evento o un detalle corporativo? Cuéntanos qué necesitas y conversemos sobre las opciones disponibles.</p></div><Link className="button button-light" href="/empresas">Hablar de mi empresa <span aria-hidden="true">↗</span></Link></div></section>
 

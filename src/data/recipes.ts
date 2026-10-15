@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/paths";
+
 export type Recipe = {
   slug: string;
   title: string;
@@ -24,7 +26,7 @@ export const recipes: Recipe[] = [
     slug: "matcha-latte-frio",
     title: "Matcha latte frío",
     introduction: "Cremoso y fresco, con una base de matcha bien disuelta para evitar grumos.",
-    image: "/images/matcha-latte.jpg",
+    image: assetPath("/images/matcha-latte.jpg"),
     imageAlt: "Matcha vertiéndose sobre leche para preparar un latte frío",
     category: "Latte",
     ingredient: "Matcha",
@@ -43,7 +45,7 @@ export const recipes: Recipe[] = [
     slug: "matcha-latte-caliente",
     title: "Matcha latte caliente",
     introduction: "Una preparación suave para tomarte unos minutos con calma.",
-    image: "/images/matcha-latte.jpg",
+    image: assetPath("/images/matcha-latte.jpg"),
     imageAlt: "Matcha preparado con leche, visto durante el servicio",
     category: "Latte",
     ingredient: "Matcha",
@@ -62,7 +64,7 @@ export const recipes: Recipe[] = [
     slug: "te-frio-naranja",
     title: "Té frío de naranja",
     introduction: "Una receta sencilla para preparar, enfriar y servir un té con un toque de fruta fresca.",
-    image: "/images/te-naranja.jpg",
+    image: assetPath("/images/te-naranja.jpg"),
     imageAlt: "Empaque de té Le Thé entre naranjas",
     category: "Té frío",
     ingredient: "Naranja",
@@ -81,7 +83,7 @@ export const recipes: Recipe[] = [
     slug: "te-frio-arandanos",
     title: "Té frío de arándanos",
     introduction: "Una forma frutal y fácil de servir el té en días cálidos.",
-    image: "/images/te-arandanos.jpg",
+    image: assetPath("/images/te-arandanos.jpg"),
     imageAlt: "Empaque de té Le Thé rodeado de arándanos",
     category: "Té frío",
     ingredient: "Arándanos",
@@ -100,7 +102,7 @@ export const recipes: Recipe[] = [
     slug: "guia-preparar-te",
     title: "Guía básica para preparar té en casa",
     introduction: "Una base práctica para ajustar agua, cantidad y tiempo a tu gusto y a cada té.",
-    image: "/images/ritual-del-te.jpg",
+    image: assetPath("/images/ritual-del-te.jpg"),
     imageAlt: "Composición de tazas e infusiones con una frase sobre disfrutar el té",
     category: "Guía",
     ingredient: "Té",
