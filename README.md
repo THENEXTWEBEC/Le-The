@@ -22,8 +22,9 @@ Para generar la versión de producción:
 ```bash
 npm run typecheck
 npm run build
-npm start
 ```
+
+La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. Esa carpeta se publica en Sites.
 
 ## Configuración de contacto
 
