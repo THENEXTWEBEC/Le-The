@@ -17,6 +17,7 @@ export function SiteFooter() {
           <h2>Explora</h2>
           <Link href="/catalogo">Catálogo</Link>
           <Link href="/recetas">Recetas</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/empresas">Empresas</Link>
           <Link href="/contacto">Contacto</Link>

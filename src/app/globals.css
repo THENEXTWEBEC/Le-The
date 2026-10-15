@@ -211,6 +211,36 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .recipe-tip h3 { color: var(--red); font-size: 1.4rem; margin-bottom: 9px; }
 .recipe-tip p { color: #55564d; line-height: 1.7; margin: 0; }
 
+.blog-home-section { background: #eee7db; }
+.blog-index { padding-top: clamp(54px, 7vw, 100px); padding-bottom: 120px; }
+.blog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
+.blog-card { min-width: 0; }
+.blog-card-image { position: relative; display: block; aspect-ratio: 1.12; overflow: hidden; background: #e7e0d3; }
+.blog-card-image img { object-fit: cover; transition: transform .5s ease; }
+.blog-card-image-portrait { background: #f1eee7; }
+.blog-card-image-portrait img { object-fit: contain; }
+.blog-card-image:hover img { transform: scale(1.025); }
+.blog-card-copy { padding: 25px 3px 0; }
+.blog-card-copy h3 { font-size: clamp(2rem, 3vw, 3.15rem); line-height: 1.08; letter-spacing: -.04em; margin: 15px 0 17px; }
+.blog-card-copy > p:not(.eyebrow) { color: var(--muted); line-height: 1.7; max-width: 54ch; }
+.blog-card-copy .text-link { margin-top: 9px; }
+.blog-article { padding-bottom: clamp(90px, 10vw, 150px); }
+.blog-article-header { max-width: 920px; margin: 36px auto 50px; text-align: center; }
+.blog-article-header h1 { font-size: clamp(3.5rem, 7vw, 7rem); line-height: 1.02; letter-spacing: -.06em; margin: 18px 0 25px; }
+.blog-article-header > p:last-child { color: var(--muted); font-size: clamp(1.1rem, 1.7vw, 1.35rem); line-height: 1.65; max-width: 58ch; margin: 0 auto; }
+.blog-article-cover { max-width: 1040px; margin: 0 auto clamp(70px, 8vw, 110px); background: var(--cream); }
+.blog-article-cover-portrait { max-width: 720px; }
+.blog-article-cover img { width: 100%; height: auto; }
+.blog-article-body { max-width: 730px; margin: 0 auto; }
+.blog-article-body section { margin-bottom: 58px; }
+.blog-article-body h2 { font-size: clamp(2.35rem, 3.4vw, 3.5rem); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 24px; }
+.blog-article-body p { color: #4d4d42; font-size: 1.08rem; line-height: 1.85; margin-bottom: 21px; }
+.blog-sources { border-top: 1px solid var(--line); padding-top: 25px; margin: 65px 0; }
+.blog-sources h2 { color: var(--red); font-family: Arial, Helvetica, sans-serif; font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.blog-sources ul { padding-left: 18px; margin: 0; color: var(--muted); line-height: 1.8; }
+.blog-sources a { color: var(--red); border-bottom: 1px solid currentColor; }
+.blog-article-end { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; border-top: 1px solid var(--line); padding-top: 32px; }
+
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; align-items: center; }
 .about-image { position: relative; aspect-ratio: 4 / 4.5; }
 .about-image img { object-fit: cover; }
@@ -256,6 +286,12 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .intro-image { aspect-ratio: 1 / 1; }
   .intro-copy h2, .how-grid h2, .idea-copy h2, .contact-band h2 { font-size: clamp(2.75rem, 11vw, 4rem); }
   .featured-products, .catalog-grid, .recipe-preview, .related-grid { grid-template-columns: 1fr; gap: 36px; }
+  .blog-grid { grid-template-columns: 1fr; gap: 60px; }
+  .blog-card-image { aspect-ratio: 1 / 1; }
+  .blog-article-header { margin: 14px auto 35px; text-align: left; }
+  .blog-article-header > p:last-child { margin-left: 0; }
+  .blog-article-cover { margin-bottom: 55px; }
+  .blog-article-body p { font-size: 1rem; }
   .card-image { aspect-ratio: 1 / 1.04; }
   .card-copy p { min-height: 0; }
   .section-end { margin-top: 35px; }

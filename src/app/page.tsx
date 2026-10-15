@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { RecipeCard } from "@/components/recipe-card";
+import { BlogCard } from "@/components/blog-card";
+import { blogPosts } from "@/data/blog-posts";
 import { products } from "@/data/products";
 import { recipes } from "@/data/recipes";
 import { instagramUrl, whatsappHref } from "@/lib/contact";
@@ -36,6 +38,8 @@ export default function HomePage() {
     <section className="how-section section-space"><div className="container how-grid"><div><p className="eyebrow">Cómo disfrutar tu té</p><h2>Tu forma de prepararlo también cuenta.</h2><p>Una buena taza empieza con curiosidad. Descubre ideas para ajustar agua, tiempo, leche, hielo y frutas a tu gusto.</p><Link className="button button-light" href="/recetas/guia-preparar-te">Aprender a prepararlo <span aria-hidden="true">↗</span></Link></div><div className="how-lines" aria-hidden="true"><span>01 <b>Elige</b></span><span>02 <b>Prepara</b></span><span>03 <b>Disfruta</b></span></div></div></section>
 
     <section className="section-space container"><div className="section-heading"><p className="eyebrow">Ideas para tu taza</p><h2>Recetas para volver a preparar.</h2><p>Pasos claros, cantidades útiles y espacio para encontrar tu versión favorita.</p></div><div className="recipe-preview">{recipes.slice(0, 3).map((item) => <RecipeCard key={item.slug} recipe={item} />)}</div><div className="section-end"><Link href="/recetas" className="button button-outline">Todas las recetas <span aria-hidden="true">↗</span></Link></div></section>
+
+    <section className="section-space blog-home-section"><div className="container"><div className="section-heading"><p className="eyebrow">Blog Le Thé</p><h2>Conversaciones con té.</h2><p>Una invitación para compartir y una curiosidad para mirar tu taza con otros ojos.</p></div><div className="blog-grid">{blogPosts.map((post) => <BlogCard key={post.slug} post={post} />)}</div><div className="section-end"><Link href="/blog" className="button button-outline">Ir al blog <span aria-hidden="true">↗</span></Link></div></div></section>
 
     <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/idea-bebida-citrica.jpg")} alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
 
