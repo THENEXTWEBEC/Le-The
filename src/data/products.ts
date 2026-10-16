@@ -85,7 +85,7 @@ export const products: Product[] = [
     steepTime: null,
     waterTemperature: null,
     suggestedServing: "Puedes consultarnos cómo prepararlo caliente o con hielo.",
-    relatedRecipes: ["guia-preparar-te"],
+    relatedRecipes: ["te-verde-manzana-canela", "guia-preparar-te"],
   },
   {
     slug: "te-menta",
@@ -102,7 +102,7 @@ export const products: Product[] = [
     steepTime: null,
     waterTemperature: null,
     suggestedServing: "Puedes consultarnos cómo prepararlo caliente o con hielo.",
-    relatedRecipes: ["guia-preparar-te"],
+    relatedRecipes: ["te-verde-frio-menta-limon", "guia-preparar-te"],
   },
   {
     slug: "te-rosas",
@@ -119,7 +119,7 @@ export const products: Product[] = [
     steepTime: null,
     waterTemperature: null,
     suggestedServing: "Puedes consultarnos cómo prepararlo caliente o con hielo.",
-    relatedRecipes: ["guia-preparar-te"],
+    relatedRecipes: ["infusion-rose-frutos-rojos", "guia-preparar-te"],
   },
 ];
 
