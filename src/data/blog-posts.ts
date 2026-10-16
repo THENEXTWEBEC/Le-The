@@ -17,6 +17,98 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "te-verde-menta-ritual-desierto",
+    title: "Té verde con menta: frescura para seguir el ritmo",
+    category: "Rituales del té",
+    excerpt: "En Marruecos, el té con menta forma parte de la vida cotidiana: una pausa aromática que invita a compartir y continuar el día.",
+    image: assetPath("/images/blog-green-tea-mint-desert.webp"),
+    imageAlt: "Taza de té y tetera tradicional frente a las dunas del desierto",
+    imageWidth: 1378,
+    imageHeight: 1280,
+    sections: [
+      {
+        heading: "Un ritual que atraviesa el desierto",
+        paragraphs: [
+          "El té verde con menta ocupa un lugar especial en la cultura marroquí. Se sirve caliente a distintas horas del día y acompaña encuentros, conversaciones y gestos de hospitalidad.",
+          "En medio de un clima exigente, el aroma de la menta y la pausa de servir el té convierten cada taza en un ritual adaptable: puede abrir la mañana, acompañar una comida o reunir a varias personas al caer la tarde.",
+        ],
+      },
+      {
+        heading: "Teína, cafeína y atención",
+        paragraphs: [
+          "La llamada teína es cafeína: la misma molécula presente en el café. En el té, su cantidad cambia según las hojas, la porción y el tiempo de infusión; también varía la respuesta de cada persona.",
+          "El té contiene además L-teanina. La investigación estudia cómo la combinación de L-teanina y cafeína puede influir en la atención a corto plazo, aunque una taza no produce el mismo efecto en todo el mundo. Si eres sensible a la cafeína, ajusta la cantidad o el horario.",
+        ],
+      },
+      {
+        heading: "El equilibrio de Mint Green",
+        paragraphs: [
+          "Inspirado en esa tradición, Mint Green de Le Thé combina el carácter del té verde con un perfil de menta fresco y aromático. Disfrútalo caliente para hacer una pausa o sírvelo con hielo cuando quieras una versión más ligera.",
+          "Descubre nuestra selección de tés pensados para acompañarte en distintos ritmos y momentos. Escríbenos y te ayudamos a encontrar el blend ideal para ti.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Estudio sobre la menta y el ritual del té en la cultura marroquí", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6371435/" },
+      { label: "FDA: cafeína, sensibilidad individual y consumo", url: "https://www.fda.gov/consumers/articulos-para-el-consumidor-en-espanol/al-grano-cuanta-cafeina-es-demasiada" },
+      { label: "Revisión de ensayos sobre té, L-teanina, cafeína y atención", url: "https://pubmed.ncbi.nlm.nih.gov/40314930/" },
+    ],
+    nextStep: { label: "Encontrar tu té ideal", href: "/contacto" },
+  },
+  {
+    slug: "beneficios-te-blanco",
+    title: "Té blanco: delicadeza, polifenoles y una pausa consciente",
+    category: "Conoce tu té",
+    excerpt: "El té blanco destaca por su procesamiento mínimo, su sabor delicado y sus polifenoles. Esto es lo que la evidencia permite decir sobre sus beneficios.",
+    image: assetPath("/images/blog-white-tea-benefits.webp"),
+    imageAlt: "Persona sirviendo té blanco en una taza junto al texto Beneficios del té blanco",
+    imageWidth: 1430,
+    imageHeight: 1442,
+    sections: [
+      {
+        heading: "¿Qué hace especial al té blanco?",
+        paragraphs: [
+          "El té blanco proviene de la planta Camellia sinensis, igual que los tés verde, oolong y negro. Suele elaborarse con brotes y hojas jóvenes que pasan por un procesamiento mínimo, una característica que ayuda a conservar su perfil suave y aromático.",
+          "Su taza puede ofrecer notas florales, frutales o ligeramente dulces. La variedad de la hoja y la preparación influyen tanto en el sabor como en la cantidad de cafeína y otros compuestos presentes.",
+        ],
+      },
+      {
+        heading: "Polifenoles y actividad antioxidante",
+        paragraphs: [
+          "El té blanco contiene polifenoles, entre ellos catequinas estudiadas por su actividad antioxidante. En el laboratorio, estos compuestos pueden interactuar con procesos de oxidación; en el cuerpo humano, su absorción y sus efectos son más complejos.",
+          "Por eso, es más preciso hablar de una bebida que aporta compuestos vegetales dentro de una alimentación variada que prometer que una taza detendrá el envejecimiento o evitará el daño celular.",
+        ],
+      },
+      {
+        heading: "Hidratación y concentración",
+        paragraphs: [
+          "Como bebida preparada principalmente con agua, el té puede contribuir a la ingesta diaria de líquidos. Ensayos realizados con otros tipos de té han observado una hidratación comparable a la del agua en las cantidades estudiadas, aunque el agua sigue siendo la referencia principal para hidratarse.",
+          "El té también puede aportar cafeína y L-teanina. Algunos estudios investigan su relación con la atención a corto plazo, pero la cantidad varía entre productos y preparaciones, y el efecto depende de la sensibilidad individual.",
+        ],
+      },
+      {
+        heading: "Corazón e inmunidad: sin promesas exageradas",
+        paragraphs: [
+          "Los compuestos del té se estudian por su posible relación con distintos indicadores cardiometabólicos e inmunitarios. Sin embargo, la evidencia disponible no permite asegurar que beber té blanco reduzca el colesterol, prevenga infecciones o fortalezca por sí solo el sistema inmunológico.",
+          "Disfrútalo por su sabor y como parte de tus hábitos cotidianos. No sustituye una alimentación equilibrada, el descanso, la actividad física ni la orientación de un profesional de salud cuando la necesites.",
+        ],
+      },
+      {
+        heading: "Una taza a tu manera",
+        paragraphs: [
+          "Para apreciar su perfil delicado, sigue las indicaciones del empaque y evita usar agua excesivamente caliente. Prueba la primera taza sin endulzar y ajusta el tiempo de infusión en la siguiente preparación hasta encontrar tu equilibrio favorito.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Revisión científica sobre té blanco, té verde y sus compuestos", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563719/" },
+      { label: "Revisión sobre componentes bioactivos del té y sus límites", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6941079/" },
+      { label: "Ensayo sobre el té y el mantenimiento de la hidratación", url: "https://pubmed.ncbi.nlm.nih.gov/21450118/" },
+      { label: "FDA: cafeína, sensibilidad individual y consumo", url: "https://www.fda.gov/consumers/articulos-para-el-consumidor-en-espanol/al-grano-cuanta-cafeina-es-demasiada" },
+    ],
+    nextStep: { label: "Explorar nuestros tés", href: "/catalogo" },
+  },
+  {
     slug: "una-cita-con-te",
     title: "¿Te tomas un té conmigo?",
     category: "Momentos para compartir",

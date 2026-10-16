@@ -6,8 +6,10 @@ export function assetPath(path: string) {
 
 const imageWidths: Record<string, number> = {
   "blog-cita-con-te": 1092,
+  "blog-green-tea-mint-desert": 1378,
   "blog-te-negro": 1484,
   "blog-teina-earl-grey": 1420,
+  "blog-white-tea-benefits": 1430,
   "idea-bebida-citrica": 1114,
   "hero-teaware-cyan": 1426,
   "matcha-latte-caliente": 1240,
