@@ -9,6 +9,7 @@ const imageWidths: Record<string, number> = {
   "blog-te-negro": 1484,
   "blog-teina-earl-grey": 1420,
   "idea-bebida-citrica": 1114,
+  "hero-teaware-cyan": 1426,
   "matcha-latte-caliente": 1240,
   "matcha-latte": 1488,
   "ritual-del-te": 1192,

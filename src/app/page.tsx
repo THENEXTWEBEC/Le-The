@@ -22,7 +22,7 @@ export default function HomePage() {
         <p className="hero-lede">Tés para descubrir con calma, preparar a tu manera y disfrutar todos los días.</p>
         <div className="actions"><Link className="button button-primary" href="/catalogo">Explorar tés <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href="/recetas">Ver recetas</Link></div>
       </div>
-      <div className="hero-image"><Image src={assetPath("/images/matcha-latte.webp")} alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
+      <div className="hero-image"><Image src={assetPath("/images/hero-teaware-cyan.webp")} alt="Tetera blanca y tazas de té de Le Thé Ecuador sobre un fondo azul" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
     </section>
 
     <section className="intro-section section-space">
