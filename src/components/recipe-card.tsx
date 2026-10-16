@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import type { Recipe } from "@/data/recipes";
 

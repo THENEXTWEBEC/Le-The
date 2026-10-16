@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { contactEmail, instagramUrl, whatsappHref } from "@/lib/contact";
 
-export const metadata: Metadata = { title: "Contacto", description: "Canales de contacto de Le Thé Ecuador." };
+export const metadata = pageMetadata("Contacto", "Escríbenos por WhatsApp o Instagram para conocer los tés de Le Thé Ecuador.", "/contacto");
 
 export default function ContactPage() {
   const whatsapp = whatsappHref("Hola, me gustaría conocer los tés de Le Thé.");

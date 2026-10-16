@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { recipes, getRecipe } from "@/data/recipes";
 import { RecipeCard } from "@/components/recipe-card";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() { return recipes.map((item) => ({ slug: item.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const recipe = getRecipe((await params).slug);
   if (!recipe) return { title: "Receta no encontrada" };
-  return { title: recipe.title, description: recipe.introduction, openGraph: { images: [recipe.image] } };
+  return pageMetadata(recipe.title, recipe.introduction, `/recetas/${recipe.slug}`);
 }
 
 export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {

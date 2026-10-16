@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
 import { BlogCard } from "@/components/blog-card";
 import { blogPosts } from "@/data/blog-posts";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Historias, curiosidades e ideas para hacer del té un momento propio en Le Thé Ecuador.",
-};
+export const metadata = pageMetadata("Blog", "Historias, curiosidades e ideas para hacer del té un momento propio en Le Thé Ecuador.", "/blog");
 
 export default function BlogPage() {
   return <div className="container blog-index">

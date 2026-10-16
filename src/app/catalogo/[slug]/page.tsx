@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products, getProduct } from "@/data/products";
 import { recipes } from "@/data/recipes";
 import { RecipeCard } from "@/components/recipe-card";
 import { whatsappHref } from "@/lib/contact";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() { return products.map((item) => ({ slug: item.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const product = getProduct((await params).slug);
   if (!product) return { title: "Té no encontrado" };
-  return { title: product.name, description: product.description, openGraph: { images: [product.image] } };
+  return pageMetadata(product.name, product.description, `/catalogo/${product.slug}`);
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {

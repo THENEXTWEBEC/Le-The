@@ -28,7 +28,7 @@ npm run typecheck
 npm run build
 ```
 
-La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. GitHub Actions publica automáticamente cada cambio en `main` en GitHub Pages, bajo `/Le-The/`. La web de Sites se actualiza por separado.
+La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. GitHub Actions publica automáticamente cada cambio en `main` en GitHub Pages, bajo `/Le-The/`. La web de Sites se actualiza por separado. GitHub Pages es la URL canónica e indexable; Sites declara `noindex` para evitar duplicados en buscadores.
 
 ## Configuración de contacto
 
@@ -36,7 +36,15 @@ El WhatsApp comercial confirmado es `+593 99 100 1033` y está configurado por d
 
 El enlace de Instagram `@lethe_ec` procede de la imagen de marca proporcionada y puede cambiarse con `NEXT_PUBLIC_INSTAGRAM_URL`. El correo y la URL pública del sitio se configuran con `NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_SITE_URL`. No se publica una dirección física sin confirmación.
 
-El formulario de Empresas prepara un mensaje para el WhatsApp confirmado. La persona debe pulsar «Enviar» en WhatsApp para completar su consulta; el sitio no guarda ni transmite el formulario por sí mismo.
+El formulario de Empresas prepara un mensaje para el WhatsApp confirmado. La persona debe pulsar «Enviar» en WhatsApp para completar su consulta; el sitio no guarda ni transmite el formulario por sí mismo. El aviso de privacidad y las condiciones de uso están enlazados en el pie de página.
+
+## SEO, medición y avisos legales
+
+El sitio genera títulos, descripciones, URL canónicas, tarjetas Open Graph/Twitter, favicon, `sitemap.xml` y `robots.txt`. La imagen social se encuentra en `public/images/social-preview.jpg`.
+
+La medición está desactivada porque no se ha proporcionado un ID de GA4. Si el propietario lo decide, puede configurar `NEXT_PUBLIC_GA_MEASUREMENT_ID` con su ID real (`G-…`) antes de compilar. El script de medición solo se carga tras la aceptación opcional del visitante; el pie de página permite cambiar esa preferencia. No se envían datos del formulario a Analytics: únicamente se registra la apertura del enlace preparado.
+
+Los avisos de `/privacidad` y `/terminos` son informativos y señalan los datos legales pendientes. El propietario debe confirmar identidad, domicilio legal, correo, base de tratamiento, conservación y detalles de proveedores antes de considerarlos definitivos.
 
 ## Contenido y estructura
 
@@ -70,11 +78,13 @@ El formulario de Empresas prepara un mensaje para el WhatsApp confirmado. La per
 
 ## Imágenes y marca
 
-Las cinco fotografías recibidas están guardadas como JPEG optimizados con nombres descriptivos. El sexto archivo, `logo-le-the-ecuador.png`, es el logotipo oficial proporcionado para el encabezado y el pie de página. Se muestra desde el mismo PNG, sin reconstruirlo. La composición de bebida cítrica se presenta únicamente como inspiración de preparación, con un encuadre que evita usar la marca ajena de la imagen como identidad de Le Thé.
+Las fotografías se sirven desde archivos JPEG y WebP comprimidos con nombres descriptivos. El logotipo oficial proporcionado se muestra en el encabezado y el pie desde una copia WebP transparente, sin reconstruir la marca. La composición de bebida cítrica se presenta únicamente como inspiración de preparación, con un encuadre que evita usar la marca ajena de la imagen como identidad de Le Thé.
 
 ## Pendiente de confirmación
 
 - Nombres comerciales, composición, notas de cata y parámetros de infusión de cada té.
 - Precios, disponibilidad, correo y ubicación, si se publicarán más adelante.
+- Identidad y domicilio legal del responsable, correo de privacidad y política definitiva de conservación.
+- ID de Google Analytics 4 y propiedad de Search Console, si el propietario desea activar medición e indexación supervisada.
 
 El contenido de catálogo es una muestra editorial editable. No incluye carrito ni pagos.

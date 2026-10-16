@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { whatsappNumber } from "@/lib/contact";
+import Link from "next/link";
 
 const interests = ["Té para oficina o equipo", "Té para un evento", "Regalos corporativos", "Otra consulta"];
 
@@ -30,6 +31,7 @@ export function BusinessInquiryForm() {
     ].filter(Boolean);
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
     setHandoffUrl(url);
+    window.dispatchEvent(new Event("le-the-business-handoff"));
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
@@ -44,7 +46,7 @@ export function BusinessInquiryForm() {
       <label>Cantidad aproximada<input name="quantity" type="number" min="1" max="100000" inputMode="numeric" placeholder="Si ya la conoces" /></label>
       <label className="business-form-wide">Cuéntanos tu idea <span aria-hidden="true">*</span><textarea name="message" rows={5} minLength={10} maxLength={1000} placeholder="¿Para quiénes sería? ¿Tienes una fecha o una idea en mente?" required /></label>
     </div>
-    <label className="business-consent"><input name="consent" type="checkbox" required /><span>Acepto compartir estos datos con Le Thé Ecuador para recibir una respuesta a mi consulta.</span></label>
+    <label className="business-consent"><input name="consent" type="checkbox" required /><span>Acepto compartir estos datos con Le Thé Ecuador para recibir una respuesta a mi consulta. He leído la <Link href="/privacidad">información de privacidad</Link>.</span></label>
     <p className="business-form-note">Al continuar se abrirá WhatsApp con tu mensaje preparado. Revísalo y pulsa «Enviar» allí para compartir los datos. Este sitio no guarda el formulario.</p>
     {whatsappNumber ? <button className="button button-primary" type="submit">Continuar en WhatsApp <span aria-hidden="true">↗</span></button> : <p>El canal de recepción aún no está disponible.</p>}
     {handoffUrl && <p className="business-handoff" role="status">¿No se abrió WhatsApp? <a href={handoffUrl} target="_blank" rel="noopener noreferrer">Abrir el mensaje preparado</a>. El envío se completa en WhatsApp.</p>}

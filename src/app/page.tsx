@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { RecipeCard } from "@/components/recipe-card";
@@ -8,6 +8,9 @@ import { products } from "@/data/products";
 import { recipes } from "@/data/recipes";
 import { instagramUrl, whatsappHref } from "@/lib/contact";
 import { assetPath } from "@/lib/paths";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("Le Thé Ecuador | Un momento para tu té", "Descubre Le Thé Ecuador: tés, recetas e ideas para disfrutar cada taza a tu manera.", "/");
 
 export default function HomePage() {
   const whatsapp = whatsappHref("Hola, quiero conocer los tés de Le Thé. ¿Me ayudan a elegir uno?");
@@ -19,12 +22,12 @@ export default function HomePage() {
         <p className="hero-lede">Tés para descubrir con calma, preparar a tu manera y disfrutar todos los días.</p>
         <div className="actions"><Link className="button button-primary" href="/catalogo">Explorar tés <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href="/recetas">Ver recetas</Link></div>
       </div>
-      <div className="hero-image"><Image src={assetPath("/images/matcha-latte.jpg")} alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
+      <div className="hero-image"><Image src={assetPath("/images/matcha-latte.webp")} alt="Matcha vertiéndose en un vaso de leche" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
     </section>
 
     <section className="intro-section section-space">
       <div className="container intro-grid">
-        <div className="intro-image"><Image src={assetPath("/images/ritual-del-te.jpg")} alt="Composición de infusiones y la frase «Si un té no te hace feliz, tómate dos»" fill sizes="(max-width: 800px) 100vw, 44vw" /></div>
+        <div className="intro-image"><Image src={assetPath("/images/ritual-del-te.webp")} alt="Composición de infusiones y la frase «Si un té no te hace feliz, tómate dos»" fill sizes="(max-width: 800px) 100vw, 44vw" /></div>
         <div className="intro-copy"><p className="eyebrow">El ritual</p><h2>Una pausa que se siente tuya.</h2><p>Hay muchas formas de disfrutar una taza. En Le Thé queremos que encuentres la que acompaña mejor tu día: caliente, fría, sola o compartida.</p><Link className="text-link" href="/nosotros">Conoce Le Thé <span aria-hidden="true">↗</span></Link></div>
       </div>
     </section>
@@ -41,7 +44,7 @@ export default function HomePage() {
 
     <section className="section-space blog-home-section"><div className="container"><div className="section-heading"><p className="eyebrow">Blog Le Thé</p><h2>Conversaciones con té.</h2><p>Una invitación para compartir y una curiosidad para mirar tu taza con otros ojos.</p></div><div className="blog-grid">{blogPosts.map((post) => <BlogCard key={post.slug} post={post} />)}</div><div className="section-end"><Link href="/blog" className="button button-outline">Ir al blog <span aria-hidden="true">↗</span></Link></div></div></section>
 
-    <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/idea-bebida-citrica.jpg")} alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
+    <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/idea-bebida-citrica.webp")} alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <span aria-hidden="true">↗</span></Link></div></section>
 
     <section className="business-band"><div className="container business-band-inner"><div><p className="eyebrow">Le Thé para empresas</p><h2>Un momento para compartir.</h2><p>¿Tienes una idea para tu equipo, un evento o un detalle corporativo? Cuéntanos qué necesitas y conversemos sobre las opciones disponibles.</p></div><Link className="button button-light" href="/empresas">Hablar de mi empresa <span aria-hidden="true">↗</span></Link></div></section>
 

@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import { BusinessInquiryForm } from "@/components/business-inquiry-form";
 import { assetPath } from "@/lib/paths";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Empresas",
-  description: "Cuéntanos qué necesita tu empresa y conversemos sobre opciones de té para equipos, eventos o regalos.",
-};
+export const metadata = pageMetadata("Té para empresas", "Cuéntanos qué necesita tu empresa y conversemos sobre opciones de té para equipos, eventos o regalos.", "/empresas");
 
 const occasions = [
   { number: "01", title: "Para tu equipo", text: "Una pausa de té en la oficina o en un encuentro de trabajo." },
@@ -23,7 +20,7 @@ export default function BusinessPage() {
         <p>Si tienes una idea para tu equipo, un evento o un detalle corporativo, cuéntanos lo que necesitas. Revisaremos contigo las opciones disponibles.</p>
         <a className="button button-primary" href="#consulta">Cuéntanos tu idea <span aria-hidden="true">↗</span></a>
       </div>
-      <div className="business-hero-image"><Image src={assetPath("/images/te-arandanos.jpg")} alt="Empaque de Le Thé Ecuador rodeado de arándanos" fill sizes="(max-width: 700px) 100vw, 50vw" priority /></div>
+      <div className="business-hero-image"><Image src={assetPath("/images/te-arandanos.webp")} alt="Empaque de Le Thé Ecuador rodeado de arándanos" fill sizes="(max-width: 700px) 100vw, 50vw" priority /></div>
     </section>
 
     <section className="container business-occasions section-space" aria-labelledby="business-occasions-title">

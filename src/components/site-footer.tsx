@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { contactEmail, instagramUrl, whatsappHref } from "@/lib/contact";
 import { BrandLogo } from "@/components/brand-logo";
+import { AnalyticsSettingsButton } from "@/components/analytics-settings-button";
 
 export function SiteFooter() {
   const whatsapp = whatsappHref("Hola, me gustaría conocer los tés de Le Thé.");
@@ -21,6 +22,9 @@ export function SiteFooter() {
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/empresas">Empresas</Link>
           <Link href="/contacto">Contacto</Link>
+          <Link href="/privacidad">Privacidad</Link>
+          <Link href="/terminos">Uso del sitio</Link>
+          <AnalyticsSettingsButton />
         </div>
         <div>
           <h2>Conversemos</h2>

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPost } from "@/data/blog-posts";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() { return blogPosts.map((post) => ({ slug: post.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = getBlogPost((await params).slug);
   if (!post) return { title: "Historia no encontrada" };
-  return { title: post.title, description: post.excerpt, openGraph: { images: [post.image] } };
+  return pageMetadata(post.title, post.excerpt, `/blog/${post.slug}`);
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -25,7 +26,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <p>{post.excerpt}</p>
       </header>
       <figure className={`blog-article-cover${post.portrait ? " blog-article-cover-portrait" : ""}`}>
-        <Image src={post.image} alt={post.imageAlt} width={post.imageWidth} height={post.imageHeight} priority />
+        <Image src={post.image} alt={post.imageAlt} width={post.imageWidth} height={post.imageHeight} sizes={post.portrait ? "(max-width: 750px) 100vw, 720px" : "(max-width: 1100px) 100vw, 1040px"} priority />
       </figure>
       <div className="blog-article-body">
         {post.sections.map((section) => <section key={section.heading}>
