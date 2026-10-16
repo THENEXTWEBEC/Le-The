@@ -6,6 +6,10 @@ import { catalogGroups, catalogVarietyCount } from "@/data/catalog-varieties";
 import { whatsappHref } from "@/lib/contact";
 
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
+const searchText = (name: string, family: string) => {
+  const aliases = /\b(mint|menthe)\b/i.test(name) ? " menta" : "";
+  return normalize(`${name} ${family}${aliases}`);
+};
 
 export function CatalogVarieties() {
   const [query, setQuery] = useState("");
@@ -16,7 +20,7 @@ export function CatalogVarieties() {
       .filter((group) => !category || group.id === category)
       .map((group) => ({
         ...group,
-        varieties: group.varieties.filter((name) => !search || normalize(`${name} ${group.title}`).includes(search)),
+        varieties: group.varieties.filter((name) => !search || searchText(name, group.title).includes(search)),
       }))
       .filter((group) => group.varieties.length > 0);
   }, [query, category]);
