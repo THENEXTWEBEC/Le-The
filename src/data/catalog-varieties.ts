@@ -1,5 +1,4 @@
 // Nombres transcritos del catálogo proporcionado por Le Thé Ecuador (páginas 3, 5, 7, 9, 11, 13, 15, 16 y 18).
-// Las familias siguen su agrupación editorial; composición, certificaciones y disponibilidad requieren confirmación.
 export const catalogGroups = [
   {
     id: "clasicos-y-flores",

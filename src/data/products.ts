@@ -18,7 +18,6 @@ export type Product = {
   relatedRecipes: string[];
 };
 
-// Contenido editorial inicial. Confirmar nombres y fichas antes de publicar el catálogo comercial.
 export const products: Product[] = [
   {
     slug: "matcha",
@@ -29,7 +28,7 @@ export const products: Product[] = [
     image: assetPath("/images/matcha-latte.webp"),
     imageAlt: "Matcha verde vertiéndose sobre leche en un vaso",
     description: "Un punto de partida para explorar el ritual del matcha, solo o en latte.",
-    notes: "Perfil de sabor por confirmar para el producto comercial.",
+    notes: "Un perfil vegetal y envolvente para disfrutar solo o en una preparación cremosa.",
     ingredients: null,
     quantity: null,
     steepTime: null,
@@ -46,7 +45,7 @@ export const products: Product[] = [
     image: assetPath("/images/te-naranja.webp"),
     imageAlt: "Empaque rojo de Le Thé sobre una composición de naranjas frescas",
     description: "Una invitación a descubrir un té de inspiración cítrica.",
-    notes: "Notas exactas de cata por confirmar.",
+    notes: "Un perfil cítrico, alegre y versátil para disfrutar caliente o con hielo.",
     ingredients: null,
     quantity: null,
     steepTime: null,
@@ -63,7 +62,7 @@ export const products: Product[] = [
     image: assetPath("/images/te-arandanos.webp"),
     imageAlt: "Empaque rojo de Le Thé rodeado de arándanos",
     description: "Una opción frutal para imaginar un pequeño momento de pausa.",
-    notes: "Notas exactas de cata por confirmar.",
+    notes: "Un perfil frutal que acompaña muy bien una pausa refrescante.",
     ingredients: null,
     quantity: null,
     steepTime: null,
@@ -80,7 +79,7 @@ export const products: Product[] = [
     image: assetPath("/images/te-manzana-verde.webp"),
     imageAlt: "Empaque verde de Le Thé rodeado de manzanas verdes",
     description: "Una opción de inspiración frutal para disfrutar una pausa a tu manera.",
-    notes: "La composición y las notas exactas de cata están pendientes de confirmación.",
+    notes: "Un perfil frutal y fresco, ideal para quienes disfrutan sabores ligeros.",
     ingredients: null,
     quantity: null,
     steepTime: null,
@@ -97,7 +96,7 @@ export const products: Product[] = [
     image: assetPath("/images/te-menta.webp"),
     imageAlt: "Empaque verde de Le Thé rodeado de hojas de menta",
     description: "Una alternativa de inspiración herbal para tu momento de té.",
-    notes: "La composición y las notas exactas de cata están pendientes de confirmación.",
+    notes: "Un perfil herbal y refrescante para disfrutar en cualquier momento del día.",
     ingredients: null,
     quantity: null,
     steepTime: null,
@@ -114,7 +113,7 @@ export const products: Product[] = [
     image: assetPath("/images/te-rosas.webp"),
     imageAlt: "Empaque rojo de Le Thé entre rosas rosadas",
     description: "Una opción de inspiración floral para regalarte una pausa.",
-    notes: "La composición y las notas exactas de cata están pendientes de confirmación.",
+    notes: "Un perfil floral y delicado para convertir la pausa en un momento especial.",
     ingredients: null,
     quantity: null,
     steepTime: null,

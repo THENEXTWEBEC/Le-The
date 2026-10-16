@@ -64,7 +64,7 @@ export const blogPosts: BlogPost[] = [
         heading: "El aroma de Earl Grey",
         paragraphs: [
           "El Earl Grey es una mezcla de té negro conocida por el aroma de la bergamota, un cítrico que le da su carácter perfumado. Es una forma deliciosa de detenerse a apreciar el aroma antes del primer sorbo.",
-          "Esta historia habla de un estilo de té; no describe la composición de un producto específico de Le Thé Ecuador.",
+          "Es un clásico para quienes disfrutan los perfiles cítricos y aromáticos en su taza.",
         ],
       },
     ],

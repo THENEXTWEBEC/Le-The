@@ -32,7 +32,6 @@ export function SiteFooter() {
           {whatsapp && <a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp <ArrowUpRightIcon /></a>}
           {contactEmail && <a href={`mailto:${contactEmail}`}>Correo <ArrowUpRightIcon /></a>}
           {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRightIcon /></a>}
-          {!whatsapp && !contactEmail && !instagramUrl && <p>Canales de contacto por confirmar.</p>}
         </div>
       </div>
       <div className="container footer-bottom"><span>© {new Date().getFullYear()} Le Thé Ecuador</span><span>Hecho para disfrutar cada taza.</span></div>

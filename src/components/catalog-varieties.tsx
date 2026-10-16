@@ -32,7 +32,7 @@ export function CatalogVarieties() {
         <p className="eyebrow">Explora el catálogo</p>
         <h2 id="varieties-title">Más tés por descubrir.</h2>
       </div>
-      <p>{catalogVarietyCount} variedades nombradas en el catálogo de Le Thé, reunidas por familias. Consulta composición, presentación y disponibilidad antes de elegir.</p>
+      <p>Encuentra perfiles frutales, herbales, florales y clásicos para disfrutar el té a tu manera.</p>
     </div>
 
     <div className="varieties-tools" role="search" aria-label="Buscar y filtrar otras variedades">
@@ -48,10 +48,10 @@ export function CatalogVarieties() {
     {visibleCount ? <div className="varieties-groups">{visibleGroups.map((group, index) => <div className="varieties-group" key={group.id}>
       <div className="varieties-group-heading"><span className="varieties-group-index">{String(index + 1).padStart(2, "0")}</span><h3>{group.title}</h3><span>{group.varieties.length} {group.varieties.length === 1 ? "variedad" : "variedades"}</span></div>
       <ul className="varieties-list">{group.varieties.map((name) => {
-        const whatsapp = whatsappHref(`Hola, vi ${name} en la selección de ${group.title} del catálogo Le Thé. ¿Está disponible? ¿Cuál es su composición y presentación?`);
+        const whatsapp = whatsappHref(`Hola, me interesa ${name} de la familia ${group.title}. ¿Me cuentan más y me confirman si está disponible?`);
         return <li key={`${group.id}-${name}`}>{whatsapp ? <a href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label={`Consultar ${name} de ${group.title} por WhatsApp`}><span>{name}</span><span className="varieties-list-action">Consultar <ArrowUpRightIcon /></span></a> : <span>{name}</span>}</li>;
       })}</ul>
     </div>)}</div> : <div className="varieties-empty"><p>No encontramos ese nombre en la selección.</p><button type="button" onClick={() => { setQuery(""); setCategory(""); }}>Ver todas las variedades</button></div>}
-    <p className="varieties-note">Los nombres se conservan como aparecen en el catálogo recibido. La composición y disponibilidad de cada variedad se confirman directamente con Le Thé.</p>
+    <p className="varieties-note">Escríbenos para conocer presentaciones y disponibilidad.</p>
   </section>;
 }

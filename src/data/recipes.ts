@@ -20,7 +20,6 @@ export type Recipe = {
   related: string[];
 };
 
-// Las cantidades son sugerencias de receta, no instrucciones oficiales de un producto Le Thé.
 export const recipes: Recipe[] = [
   {
     slug: "matcha-latte-frio",
@@ -38,7 +37,7 @@ export const recipes: Recipe[] = [
     tools: ["Tazón pequeño", "Batidor de bambú o batidor de mano", "Vaso alto"],
     steps: ["Tamiza el matcha en un tazón para separar posibles grumos.", "Añade el agua tibia y bate en zigzag durante 20–30 segundos, hasta obtener una mezcla uniforme.", "Llena un vaso con hielo y vierte la leche.", "Agrega el matcha lentamente y mezcla antes de beber."],
     tip: "Prueba antes de endulzar. Para más intensidad, aumenta el matcha en 0,5 g sin cambiar la cantidad de leche.",
-    variation: "Usa leche de avena o añade una pizca de vainilla. Son variaciones de la receta, no ingredientes confirmados del producto.",
+    variation: "Usa leche de avena o añade una pizca de vainilla para darle un toque diferente.",
     related: ["matcha-latte-caliente", "guia-preparar-te"],
   },
   {
@@ -76,7 +75,7 @@ export const recipes: Recipe[] = [
     tools: ["Hervidor", "Infusor o colador", "Jarra", "Dos vasos"],
     steps: ["Calienta el agua. Usa la temperatura y el tiempo indicados por el té que elijas; si no los tienes, comienza con agua a 85–90 °C.", "Infusiona las hojas 3–4 minutos como punto de partida y cuela. Ajusta según el resultado.", "Deja enfriar a temperatura ambiente y refrigera hasta que esté bien frío.", "Sirve con hielo y rodajas de naranja fresca."],
     tip: "Para un sabor menos intenso, añade agua fría después de enfriar. Endulza poco a poco.",
-    variation: "Añade una hoja de menta fresca al vaso. La fruta y la menta son ingredientes sugeridos de esta receta, no una declaración de composición del té.",
+    variation: "Añade una hoja de menta fresca al vaso para sumar un toque herbal.",
     related: ["te-frio-arandanos", "guia-preparar-te"],
   },
   {
