@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
@@ -12,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="card-meta">{product.kind} <span>·</span> {product.flavor}</div>
         <h3><Link href={`/catalogo/${product.slug}`}>{product.name}</Link></h3>
         <p>{product.description}</p>
-        <Link href={`/catalogo/${product.slug}`} className="text-link">Conocer este té <span aria-hidden="true">↗</span></Link>
+        <Link href={`/catalogo/${product.slug}`} className="text-link">Conocer este té <ArrowUpRightIcon /></Link>
       </div>
     </article>
   );

@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { ResponsiveImage as Image } from "@/components/responsive-image";
 import { BusinessInquiryForm } from "@/components/business-inquiry-form";
 import { assetPath } from "@/lib/paths";
@@ -18,7 +19,7 @@ export default function BusinessPage() {
         <p className="eyebrow">Le Thé para empresas</p>
         <h1>Una pausa para <em>compartir.</em></h1>
         <p>Si tienes una idea para tu equipo, un evento o un detalle corporativo, cuéntanos lo que necesitas. Revisaremos contigo las opciones disponibles.</p>
-        <a className="button button-primary" href="#consulta">Cuéntanos tu idea <span aria-hidden="true">↗</span></a>
+        <a className="button button-primary" href="#consulta">Cuéntanos tu idea <ArrowUpRightIcon /></a>
       </div>
       <div className="business-hero-image"><Image src={assetPath("/images/te-arandanos.webp")} alt="Empaque de Le Thé Ecuador rodeado de arándanos" fill sizes="(max-width: 700px) 100vw, 50vw" priority /></div>
     </section>

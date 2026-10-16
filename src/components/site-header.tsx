@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -58,7 +59,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link className="header-cta" href="/catalogo">
-          Descubrir tés <span aria-hidden="true">↗</span>
+          Descubrir tés <ArrowUpRightIcon />
         </Link>
         <button
           ref={menuButtonRef}
@@ -85,11 +86,11 @@ export function SiteHeader() {
             >
               <span className="mobile-nav-number">0{index + 1}</span>
               <span>{link.label}</span>
-              <span className="mobile-nav-arrow" aria-hidden="true">↗</span>
+              <ArrowUpRightIcon className="mobile-nav-arrow" />
             </Link>
           ))}
           <Link className="mobile-nav-cta" href="/catalogo" onClick={() => setOpenForPath(null)}>
-            Descubrir tés <span aria-hidden="true">↗</span>
+            Descubrir tés <ArrowUpRightIcon />
           </Link>
         </div>
       </nav>

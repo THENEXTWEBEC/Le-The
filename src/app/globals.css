@@ -38,6 +38,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .button-light:hover { background: white; }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; gap: 15px; color: var(--red); font-size: .9rem; font-weight: 700; border-bottom: 1px solid currentColor; padding-bottom: 5px; transition: gap .2s; }
 .text-link:hover { gap: 22px; }
+.arrow-icon { display: inline-block; width: 18px; height: 18px; flex: 0 0 auto; vertical-align: middle; }
 
 .site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid #d8d0c1b8; background: #faf7f0f2; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .header-inner { min-height: 94px; display: grid; grid-template-columns: 108px minmax(0, 1fr) auto; align-items: center; gap: 22px; }
@@ -53,7 +54,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .site-footer a:hover { color: var(--red); }
 .header-cta { display: inline-flex; align-items: center; justify-content: center; gap: 22px; min-height: 46px; padding: 0 19px; border-radius: 999px; background: var(--red); color: white; font-size: .81rem; font-weight: 700; white-space: nowrap; transition: background .2s, transform .2s; }
 .header-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
-.header-cta span { font-size: 1.1rem; font-weight: 400; }
+.header-cta .arrow-icon { width: 17px; height: 17px; }
 .menu-toggle, .mobile-nav { display: none; }
 .mobile-nav[hidden] { display: none; }
 
@@ -308,7 +309,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .mobile-nav-inner > a:not(.mobile-nav-cta) { display: grid; grid-template-columns: 32px 1fr auto; align-items: center; gap: 16px; min-height: 58px; border-bottom: 1px solid var(--line); font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; letter-spacing: -.025em; }
   .mobile-nav-inner > a:not(.mobile-nav-cta):hover, .mobile-nav-inner > a[aria-current="page"] { color: var(--red); }
   .mobile-nav-number { align-self: center; color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .09em; }
-  .mobile-nav-arrow { color: var(--red); font-family: Arial, Helvetica, sans-serif; font-size: 1.1rem; }
+  .mobile-nav-arrow { color: var(--red); }
   .mobile-nav-cta { display: flex; align-items: center; justify-content: space-between; min-height: 49px; margin-top: 22px; padding: 0 18px; border-radius: 999px; background: var(--red); color: white; font-size: .85rem; font-weight: 700; }
   .mobile-nav-cta:hover { background: var(--red-dark); }
 }

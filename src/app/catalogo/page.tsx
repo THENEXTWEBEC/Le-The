@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { ProductFilters } from "@/components/product-filters";
 import { whatsappHref } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
@@ -15,7 +16,7 @@ export default function CatalogPage() {
     </div>
     <div className="catalog-more-flavors">
       <p><strong>Más de 80 sabores de té.</strong> ¿Te interesa uno que no aparece aquí? Escríbenos para conocer otras opciones y consultar su disponibilidad.</p>
-      {whatsapp && <a className="button button-outline" href={whatsapp} target="_blank" rel="noopener noreferrer">Preguntar por WhatsApp <span aria-hidden="true">↗</span></a>}
+      {whatsapp && <a className="button button-outline" href={whatsapp} target="_blank" rel="noopener noreferrer">Preguntar por WhatsApp <ArrowUpRightIcon /></a>}
     </div>
     <ProductFilters />
   </div>;

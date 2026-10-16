@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { useState, type FormEvent } from "react";
 import { whatsappNumber } from "@/lib/contact";
 import Link from "next/link";
@@ -48,7 +49,7 @@ export function BusinessInquiryForm() {
     </div>
     <label className="business-consent"><input name="consent" type="checkbox" required /><span>Acepto compartir estos datos con Le Thé Ecuador para recibir una respuesta a mi consulta. He leído la <Link href="/privacidad">información de privacidad</Link>.</span></label>
     <p className="business-form-note">Al continuar se abrirá WhatsApp con tu mensaje preparado. Revísalo y pulsa «Enviar» allí para compartir los datos. Este sitio no guarda el formulario.</p>
-    {whatsappNumber ? <button className="button button-primary" type="submit">Continuar en WhatsApp <span aria-hidden="true">↗</span></button> : <p>El canal de recepción aún no está disponible.</p>}
+    {whatsappNumber ? <button className="button button-primary" type="submit">Continuar en WhatsApp <ArrowUpRightIcon /></button> : <p>El canal de recepción aún no está disponible.</p>}
     {handoffUrl && <p className="business-handoff" role="status">¿No se abrió WhatsApp? <a href={handoffUrl} target="_blank" rel="noopener noreferrer">Abrir el mensaje preparado</a>. El envío se completa en WhatsApp.</p>}
   </form>;
 }

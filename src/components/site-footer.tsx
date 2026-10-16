@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import Link from "next/link";
 import { contactEmail, instagramUrl, whatsappHref } from "@/lib/contact";
 import { BrandLogo } from "@/components/brand-logo";
@@ -28,9 +29,9 @@ export function SiteFooter() {
         </div>
         <div>
           <h2>Conversemos</h2>
-          {whatsapp && <a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>}
-          {contactEmail && <a href={`mailto:${contactEmail}`}>Correo <span aria-hidden="true">↗</span></a>}
-          {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>}
+          {whatsapp && <a href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp <ArrowUpRightIcon /></a>}
+          {contactEmail && <a href={`mailto:${contactEmail}`}>Correo <ArrowUpRightIcon /></a>}
+          {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRightIcon /></a>}
           {!whatsapp && !contactEmail && !instagramUrl && <p>Canales de contacto por confirmar.</p>}
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import type { Recipe } from "@/data/recipes";
@@ -12,7 +13,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
         <div className="card-meta">{recipe.category} <span>·</span> {recipe.duration}</div>
         <h3><Link href={`/recetas/${recipe.slug}`}>{recipe.title}</Link></h3>
         <p>{recipe.introduction}</p>
-        <Link href={`/recetas/${recipe.slug}`} className="text-link">Ver preparación <span aria-hidden="true">↗</span></Link>
+        <Link href={`/recetas/${recipe.slug}`} className="text-link">Ver preparación <ArrowUpRightIcon /></Link>
       </div>
     </article>
   );

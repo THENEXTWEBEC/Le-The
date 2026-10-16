@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import type { Metadata } from "next";
 import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
@@ -35,9 +36,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </section>)}
         {post.sources && <aside className="blog-sources" aria-label="Fuentes">
           <h2>Para saber más</h2>
-          <ul>{post.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul>
+          <ul>{post.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} <ArrowUpRightIcon /></a></li>)}</ul>
         </aside>}
-        <div className="blog-article-end"><Link className="button button-primary" href={post.nextStep.href}>{post.nextStep.label} <span aria-hidden="true">↗</span></Link><Link className="text-link" href="/blog">Volver al blog</Link></div>
+        <div className="blog-article-end"><Link className="button button-primary" href={post.nextStep.href}>{post.nextStep.label} <ArrowUpRightIcon /></Link><Link className="text-link" href="/blog">Volver al blog</Link></div>
       </div>
     </article>
   </>;

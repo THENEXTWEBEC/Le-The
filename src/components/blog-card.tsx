@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { ResponsiveImage as Image } from "@/components/responsive-image";
 import Link from "next/link";
 import type { BlogPost } from "@/data/blog-posts";
@@ -11,7 +12,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
       <p className="eyebrow">{post.category}</p>
       <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
       <p>{post.excerpt}</p>
-      <Link className="text-link" href={`/blog/${post.slug}`}>Leer historia <span aria-hidden="true">↗</span></Link>
+      <Link className="text-link" href={`/blog/${post.slug}`}>Leer historia <ArrowUpRightIcon /></Link>
     </div>
   </article>;
 }
