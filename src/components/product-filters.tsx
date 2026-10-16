@@ -18,14 +18,14 @@ export function ProductFilters() {
   ), [query, kind, flavor, serving]);
 
   return <>
-    <div className="filters" role="search" aria-label="Buscar y filtrar tés">
-      <label>Buscar té<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Nombre del té" /></label>
+    <div className="filters" role="search" aria-label="Buscar y filtrar best sellers">
+      <label>Buscar destacado<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Nombre del té destacado" /></label>
       <label>Tipo<select value={kind} onChange={(event) => setKind(event.target.value)}><option value="">Todos</option>{kinds.map((item) => <option key={item}>{item}</option>)}</select></label>
       <label>Perfil<select value={flavor} onChange={(event) => setFlavor(event.target.value)}><option value="">Todos</option>{flavors.map((item) => <option key={item}>{item}</option>)}</select></label>
       <label>Preparación<select value={serving} onChange={(event) => setServing(event.target.value)}><option value="">Ambas</option><option>Caliente</option><option>Frío</option></select></label>
     </div>
-    <p className="result-count" aria-live="polite">{filtered.length} {filtered.length === 1 ? "té" : "tés"}</p>
+    <p className="result-count" aria-live="polite">{filtered.length} {filtered.length === 1 ? "té destacado" : "tés destacados"}</p>
     {filtered.length ? <div className="catalog-grid">{filtered.map((item) => <ProductCard key={item.slug} product={item} />)}</div> :
-      <div className="empty-state"><h2>No encontramos ese té</h2><p>Prueba otra palabra o cambia los filtros.</p><button type="button" onClick={() => { setQuery(""); setKind(""); setFlavor(""); setServing(""); }}>Limpiar filtros</button></div>}
+      <div className="empty-state"><h2>No encontramos ese destacado</h2><p>Prueba otra palabra o explora las variedades más abajo.</p><button type="button" onClick={() => { setQuery(""); setKind(""); setFlavor(""); setServing(""); }}>Limpiar filtros</button></div>}
   </>;
 }
