@@ -42,7 +42,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .header-inner { min-height: 106px; display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 28px; }
 .brand { display: inline-flex; width: fit-content; }
 .logo-window { display: block; position: relative; width: 112px; height: 100px; overflow: hidden; }
-.logo-window img { object-fit: contain; transform: scale(2.15); mix-blend-mode: multiply; }
+.logo-window img { object-fit: contain; transform: scale(2.05); }
 .main-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: clamp(20px, 3vw, 44px); font-size: .87rem; font-weight: 600; }
 .main-nav a, .site-footer a { transition: color .2s; }
 .main-nav a:hover, .site-footer a:hover { color: var(--red); }
