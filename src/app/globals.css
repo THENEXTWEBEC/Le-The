@@ -17,9 +17,12 @@ body {
   margin: 0;
   background-color: var(--paper);
   background-image:
-    linear-gradient(115deg, #fff9ed38, transparent 42%, #b69b7612 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%238b755b' stroke-opacity='.105' stroke-width='.7'%3E%3Cpath d='M48 7c8 12 17 21 29 29-12 8-21 17-29 29-8-12-17-21-29-29 12-8 21-17 29-29Z'/%3E%3Cpath d='M0 55c8 12 17 21 29 29M96 55C88 67 79 76 67 84M48 65c8 12 17 21 29 29M48 65C40 77 31 86 19 94'/%3E%3C/g%3E%3C/svg%3E"),
-    repeating-linear-gradient(0deg, #5e49380a 0, #5e49380a 1px, transparent 1px, transparent 4px);
+    linear-gradient(#f8f1e5a8, #f8f1e5a8),
+    url("./beige-botanical-wallpaper.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -80,7 +83,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
   .hero-image img { object-position: left center; }
 }
 
-.intro-section { background: #e4d8c5e8; }
+.intro-section { background: #e4d8c5c9; }
 .intro-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: clamp(44px, 9vw, 140px); align-items: center; }
 .intro-image { position: relative; aspect-ratio: 4 / 4.2; overflow: hidden; }
 .intro-image img { object-fit: cover; object-position: center; }
@@ -120,7 +123,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .idea-image img { object-fit: cover; object-position: center 44%; transform: scale(1.35); }
 .idea-copy { max-width: 530px; }
 .idea-copy .text-link { margin-top: 20px; }
-.contact-band { background: #e7dac5e8; padding: clamp(64px, 7vw, 105px) 0; }
+.contact-band { background: #e7dac5c9; padding: clamp(64px, 7vw, 105px) 0; }
 .contact-band-inner { display: flex; align-items: end; justify-content: space-between; gap: 54px; }
 .contact-band h2 { max-width: 660px; }
 .contact-band-actions { display: flex; flex-direction: column; align-items: start; gap: 25px; flex: 0 0 auto; padding-bottom: 12px; }
@@ -166,7 +169,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .business-handoff { color: var(--muted); font-size: .83rem; line-height: 1.6; margin: 18px 0 0; }
 .business-handoff a { color: var(--red); border-bottom: 1px solid currentColor; }
 
-.site-footer { background: #e5d9c7ed; border-top: 1px solid var(--line); padding-top: 64px; }
+.site-footer { background: #e5d9c7df; border-top: 1px solid var(--line); padding-top: 64px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding-bottom: 70px; }
 .footer-grid p { color: #58594f; max-width: 280px; line-height: 1.6; font-size: .9rem; }
 .footer-logo { display: inline-block; margin-bottom: 16px; }
@@ -272,7 +275,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .recipe-tip h3 { color: var(--red); font-size: 1.4rem; margin-bottom: 9px; }
 .recipe-tip p { color: #55564d; line-height: 1.7; margin: 0; }
 
-.blog-home-section { background: #e9decee8; }
+.blog-home-section { background: #e9decec9; }
 .blog-index { padding-top: clamp(54px, 7vw, 100px); padding-bottom: 120px; }
 .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 48px); }
 .blog-card { min-width: 0; }
