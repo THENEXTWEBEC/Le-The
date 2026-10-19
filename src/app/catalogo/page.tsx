@@ -1,6 +1,7 @@
 import { ArrowUpRightIcon } from "@/components/arrow-up-right-icon";
 import { CatalogVarieties } from "@/components/catalog-varieties";
-import { ProductFilters } from "@/components/product-filters";
+import { ProductCard } from "@/components/product-card";
+import { products } from "@/data/products";
 import { whatsappHref } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
 
@@ -19,7 +20,7 @@ export default function CatalogPage() {
       <p><strong>Muchos sabores por descubrir.</strong> Explora nuestras variedades por familia o pregúntanos por la disponibilidad de tu favorita.</p>
       <div className="catalog-more-flavors-actions"><a className="text-link" href="#otras-variedades">Ver variedades</a>{whatsapp && <a className="button button-outline" href={whatsapp} target="_blank" rel="noopener noreferrer">Preguntar por WhatsApp <ArrowUpRightIcon /></a>}</div>
     </div>
-    <ProductFilters />
+    <div className="catalog-grid">{products.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
     <CatalogVarieties />
   </div>;
 }
