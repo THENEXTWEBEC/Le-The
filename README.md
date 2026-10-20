@@ -32,7 +32,7 @@ La compilación genera un sitio estático en `out/`, con todas las fichas y rece
 
 ## Configuración de contacto
 
-El WhatsApp comercial confirmado es `+593 99 100 1033` y está configurado por defecto en `src/lib/contact.ts`. Puedes cambiarlo con `NEXT_PUBLIC_WHATSAPP_NUMBER` en `.env.local` usando solo dígitos y código de país. El botón abre un mensaje prellenado.
+El WhatsApp comercial confirmado es `+593 99 966 6722` (0999666722 en formato local) y está configurado por defecto en `src/lib/contact.ts`. Puedes cambiarlo con `NEXT_PUBLIC_WHATSAPP_NUMBER` en `.env.local` usando solo dígitos y código de país. El botón abre un mensaje prellenado.
 
 El enlace de Instagram `@lethe_ec` procede de la imagen de marca proporcionada y puede cambiarse con `NEXT_PUBLIC_INSTAGRAM_URL`. El correo y la URL pública del sitio se configuran con `NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_SITE_URL`. No se publica una dirección física sin confirmación.
 
