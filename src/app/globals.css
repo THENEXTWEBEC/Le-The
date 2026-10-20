@@ -34,6 +34,13 @@ body::before {
   background-position: center;
   background-size: cover;
 }
+@media (min-width: 1101px) {
+  body::before {
+    background-image:
+      linear-gradient(#f8f1e520, #f8f1e520),
+      url("./elegant-tea-botanical-border.jpg");
+  }
+}
 img { display: block; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
