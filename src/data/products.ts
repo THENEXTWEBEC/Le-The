@@ -38,7 +38,7 @@ export const products: Product[] = [
   },
   {
     slug: "te-naranja",
-    name: "Té con naranja",
+    name: "Té de naranja",
     kind: "Té de hoja suelta",
     flavor: "Cítrico",
     serving: ["Caliente", "Frío"],
@@ -55,7 +55,7 @@ export const products: Product[] = [
   },
   {
     slug: "te-arandanos",
-    name: "Té con arándanos",
+    name: "Té de arándanos",
     kind: "Té de hoja suelta",
     flavor: "Frutal",
     serving: ["Caliente", "Frío"],
@@ -72,7 +72,7 @@ export const products: Product[] = [
   },
   {
     slug: "te-manzana-verde",
-    name: "Té con manzana verde",
+    name: "Té de manzana verde",
     kind: "Té de hoja suelta",
     flavor: "Frutal",
     serving: ["Caliente", "Frío"],
@@ -89,7 +89,7 @@ export const products: Product[] = [
   },
   {
     slug: "te-menta",
-    name: "Té con menta",
+    name: "Té de menta",
     kind: "Té de hoja suelta",
     flavor: "Herbal",
     serving: ["Caliente", "Frío"],
@@ -106,7 +106,7 @@ export const products: Product[] = [
   },
   {
     slug: "te-rosas",
-    name: "Té con rosas",
+    name: "Té de rosas",
     kind: "Té de hoja suelta",
     flavor: "Floral",
     serving: ["Caliente", "Frío"],
