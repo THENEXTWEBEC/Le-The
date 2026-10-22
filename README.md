@@ -4,7 +4,7 @@ Sitio inicial de Le Thé Ecuador, creado con Next.js, TypeScript y Tailwind CSS.
 
 **Web pública:** https://le-the-ecuador.robustlyric4.chatgpt.site/
 
-**GitHub Pages:** https://thenextwebec.github.io/Le-The/
+**Sitio publicado:** https://le-thé.com/
 
 ## Requisitos
 
@@ -28,7 +28,7 @@ npm run typecheck
 npm run build
 ```
 
-La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. GitHub Actions publica automáticamente cada cambio en `main` en GitHub Pages, bajo `/Le-The/`. La web de Sites se actualiza por separado. GitHub Pages es la URL canónica e indexable; Sites declara `noindex` para evitar duplicados en buscadores.
+La compilación genera un sitio estático en `out/`, con todas las fichas y recetas incluidas. GitHub Actions publica automáticamente cada cambio en `main` en GitHub Pages, en el dominio personalizado `le-thé.com`. La web de Sites se actualiza por separado. El dominio personalizado es la URL canónica e indexable.
 
 ## Configuración de contacto
 

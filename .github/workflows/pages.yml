@@ -27,9 +27,8 @@ jobs:
       - uses: actions/configure-pages@v5
       - run: npm run build
         env:
-          GITHUB_PAGES: "true"
-          NEXT_PUBLIC_BASE_PATH: /Le-The
-          NEXT_PUBLIC_SITE_URL: https://thenextwebec.github.io/Le-The
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://xn--le-th-fsa.com
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v4
         with:

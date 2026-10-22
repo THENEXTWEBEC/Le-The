@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(canonicalBase),
   title: { default: "Le Thé Ecuador | Un momento para tu té", template: "%s | Le Thé Ecuador" },
   description: "Descubre Le Thé Ecuador, explora tés y encuentra recetas sencillas para disfrutar cada taza.",
-  robots: process.env.GITHUB_PAGES === "true" ? { index: true, follow: true } : { index: false, follow: false },
+  robots: process.env.NODE_ENV === "production" ? { index: true, follow: true } : { index: false, follow: false },
   icons: {
     icon: [{ url: assetPath("/favicon.ico"), sizes: "any" }, { url: assetPath("/icon-192.png"), sizes: "192x192", type: "image/png" }, { url: assetPath("/icon-512.png"), sizes: "512x512", type: "image/png" }],
     apple: [{ url: assetPath("/apple-touch-icon.png"), sizes: "180x180", type: "image/png" }],

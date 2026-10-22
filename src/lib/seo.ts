@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const canonicalBase = "https://thenextwebec.github.io/Le-The";
+export const canonicalBase = process.env.NEXT_PUBLIC_SITE_URL || "https://xn--le-th-fsa.com";
 export const socialImage = `${canonicalBase}/images/social-preview.jpg`;
 
 export function canonicalUrl(path: string) {
