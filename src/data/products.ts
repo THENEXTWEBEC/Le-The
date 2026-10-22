@@ -21,7 +21,7 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "matcha",
-    name: "Especial Matcha",
+    name: "Wabi Matcha",
     kind: "Té matcha",
     flavor: "Especial",
     serving: ["Caliente", "Frío"],
