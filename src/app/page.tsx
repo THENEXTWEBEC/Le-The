@@ -16,14 +16,13 @@ export const metadata = pageMetadata("Le Thé Ecuador | Un momento para tu té",
 export default function HomePage() {
   const whatsapp = whatsappHref("Hola, quiero conocer los tés de Le Thé. ¿Me ayudan a elegir uno?");
   return <>
-    <section className="hero container">
+    <section className="hero hero-text-only container">
       <div className="hero-copy">
         <p className="eyebrow">Le Thé Ecuador</p>
         <h1>Haz del té <em>tu momento.</em></h1>
-        <p className="hero-lede">Tés para descubrir con calma, preparar a tu manera y disfrutar todos los días.</p>
+        <p className="hero-lede">Sabores para descubrir con calma. Prepáralo a tu manera y disfruta todos los días.</p>
         <div className="actions"><Link className="button button-primary" href="/catalogo">Explorar tés <ArrowUpRightIcon /></Link><Link className="button button-outline" href="/recetas">Ver recetas</Link></div>
       </div>
-      <div className="hero-image"><Image src={assetPath("/images/hero-teaware-cyan.webp")} alt="Tetera blanca y tazas de té de Le Thé Ecuador sobre un fondo azul" fill sizes="(max-width: 800px) 100vw, 54vw" priority /></div>
     </section>
 
     <section className="intro-section section-space">
@@ -34,7 +33,7 @@ export default function HomePage() {
     </section>
 
     <section className="section-space container">
-      <div className="section-heading"><p className="eyebrow">Best sellers</p><h2>Elige el tuyo.</h2><p>Matcha Ceremonial, Bingo Blueberry, Pétalos de Rosa, Cream Earl Grey y nuestros favoritos frutales, cítricos y herbales.</p></div>
+      <div className="section-heading"><p className="eyebrow">Best sellers</p><h2>Elige el tuyo.</h2><p>Frutales, Herbales, Orgánicos, Té verde, Té negro, Té azul, Té rojo, Té blanco, Té dorado, Oolong, Rooibos, Chais y nuestro “Especial Matcha”.</p></div>
       <div className="featured-products">{products.map((item) => <ProductCard key={item.slug} product={item} />)}</div>
       <div className="section-end"><Link href="/catalogo" className="button button-outline">Ver todo el catálogo <ArrowUpRightIcon /></Link></div>
     </section>
@@ -45,10 +44,10 @@ export default function HomePage() {
 
     <section className="section-space blog-home-section"><div className="container"><div className="section-heading"><p className="eyebrow">Blog Le Thé</p><h2>Conversaciones con té.</h2><p>Una invitación para compartir y una curiosidad para mirar tu taza con otros ojos.</p></div><div className="blog-grid">{blogPosts.map((post) => <BlogCard key={post.slug} post={post} />)}</div><div className="section-end"><Link href="/blog" className="button button-outline">Ir al blog <ArrowUpRightIcon /></Link></div></div></section>
 
-    <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/idea-bebida-citrica.webp")} alt="Vaso con bebida cítrica, limón y menta como inspiración para servir té frío" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba una infusión fría con cítricos, fruta fresca o menta. La imagen es inspiración de servicio: explora nuestras recetas para preparaciones reproducibles.</p><Link className="text-link" href="/recetas/te-frio-naranja">Ver té frío de naranja <ArrowUpRightIcon /></Link></div></section>
+    <section className="idea-section section-space container"><div className="idea-image"><Image src={assetPath("/images/te-bingo-blueberry.png")} alt="Empaque de Bingo Blueberry acompañado de arándanos" fill sizes="(max-width: 800px) 100vw, 45vw" /></div><div className="idea-copy"><p className="eyebrow">Una idea fresca</p><h2>El té también se sirve con hielo.</h2><p>Prueba Bingo Blueberry en frío, con hielo y fruta fresca. Una preparación sencilla para descubrir su perfil intenso, dulce y refrescante.</p><Link className="text-link" href="/recetas/bingo-blueberry-frio">Preparar Bingo Blueberry frío <ArrowUpRightIcon /></Link></div></section>
 
     <section className="business-band"><div className="container business-band-inner"><div><p className="eyebrow">Le Thé para empresas</p><h2>Un momento para compartir.</h2><p>¿Tienes una idea para tu equipo, un evento o un detalle corporativo? Cuéntanos qué necesitas y conversemos sobre las opciones disponibles.</p></div><Link className="button button-light" href="/empresas">Hablar de mi empresa <ArrowUpRightIcon /></Link></div></section>
 
-    <section className="contact-band"><div className="container contact-band-inner"><div><p className="eyebrow">¿Cuál te llevas primero?</p><h2>Elige el tuyo y conviértelo en tu momento del día.</h2><p>Matcha Ceremonial, Bingo Blueberry, Pétalos de Rosa, Cream Earl Grey y más tés seleccionados con cariño y empacados para conservar todo su aroma.</p></div><div className="contact-band-actions">{whatsapp ? <a className="button button-primary" href={whatsapp} target="_blank" rel="noopener noreferrer">Pedir por WhatsApp <ArrowUpRightIcon /></a> : <Link className="button button-primary" href="/contacto">Conversemos <ArrowUpRightIcon /></Link>}{instagramUrl && <a className="text-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Cuéntanos por DM <ArrowUpRightIcon /></a>}</div></div></section>
+    <section className="contact-band"><div className="container contact-band-inner"><div><p className="eyebrow">¿Cuál te llevas primero?</p><h2>Elige el tuyo y conviértelo en tu momento del día.</h2><p>Especial Matcha, Bingo Blueberry, Sencha Kyoto Rose, Cream Earl Grey y más tés seleccionados con cariño y empacados para conservar todo su aroma.</p></div><div className="contact-band-actions">{whatsapp ? <a className="button button-primary" href={whatsapp} target="_blank" rel="noopener noreferrer">Pedir por WhatsApp <ArrowUpRightIcon /></a> : <Link className="button button-primary" href="/contacto">Conversemos <ArrowUpRightIcon /></Link>}{instagramUrl && <a className="text-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Cuéntanos por DM <ArrowUpRightIcon /></a>}</div></div></section>
   </>;
 }

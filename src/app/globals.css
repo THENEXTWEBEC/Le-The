@@ -86,6 +86,8 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .mobile-nav[hidden] { display: none; }
 
 .hero { display: grid; grid-template-columns: 46% 54%; min-height: min(560px, calc(100dvh - 94px)); }
+.hero-text-only { grid-template-columns: minmax(0, 1fr); min-height: min(620px, calc(100dvh - 94px)); }
+.hero-text-only .hero-copy { max-width: 820px; padding-block: 90px; }
 .hero-copy { align-self: center; padding: 52px 48px 52px 0; }
 .hero-copy h1 { max-width: 600px; font-size: clamp(3.8rem, 6vw, 6.8rem); letter-spacing: -.065em; line-height: .99; margin: 22px 0 28px; }
 .hero-copy h1 em { color: var(--red); font-weight: 400; }
