@@ -33,7 +33,7 @@ export default function HomePage() {
     </section>
 
     <section className="section-space container">
-      <div className="section-heading"><p className="eyebrow">Best sellers</p><h2>Elige el tuyo.</h2><p>Frutales, Herbales, Orgánicos, Té verde, Té negro, Té azul, Té rojo, Té blanco, Té dorado, Oolong, Rooibos, Chais y nuestro “Wabi Matcha”.</p></div>
+      <div className="section-heading"><p className="eyebrow">Best sellers</p><h2>Encuentra tu favorito.</h2><p>Frutales, Herbales, Orgánicos, Té verde, Té negro, Té azul, Té rojo, Té blanco, Té dorado, Oolong, Rooibos, Chais y nuestro “Wabi Matcha”.</p></div>
       <div className="featured-products">{products.map((item) => <ProductCard key={item.slug} product={item} />)}</div>
       <div className="section-end"><Link href="/catalogo" className="button button-outline">Ver todo el catálogo <ArrowUpRightIcon /></Link></div>
     </section>
